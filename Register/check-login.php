@@ -8,7 +8,6 @@
   
 <body>
         <?php
-  
         // servername => localhost
         // username => root
         // password => empty
@@ -20,12 +19,8 @@
             die("ERROR: Could not connect. " 
                 . mysqli_connect_error());
         }
-          
-        // Taking all 5 values from the form data(input)
         $nume =  $_POST['name'];
         $parola = $_POST['password'];
-        // Performing insert query execution
-        // here our table name is login
         $check_user = mysqli_query($conn, "SELECT name, password FROM login where name = '$nume' AND password = '$parola' ");
 if(mysqli_num_rows($check_user) > 0){
     header('Location: http://localhost/PEM/admin.html');

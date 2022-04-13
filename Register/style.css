@@ -12,9 +12,9 @@ input {
 .container {
   position: relative;
   width: 100%;
-  background-color: #fff;
+  background-color: white;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* pentru trecerea de la signin la signup*/
 }
 
 .forms-container {
@@ -23,16 +23,17 @@ input {
   height: 100%;
   top: 0;
   left: 0;
+  background-color: white;
 }
 
 .signin-signup {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* stanga-dreapta; jos-sus*/
   left: 75%;
   width: 50%;
   transition: 1s 0.7s ease-in-out;
-  display: grid;
+  display: grid; /*grid container with 1 column*/
   grid-template-columns: 1fr;
   z-index: 5;
 }
@@ -42,10 +43,10 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0rem 5rem;
-  transition: all 0.2s 0.7s;
+  padding: 0px 80px;
+  transition: all 0.4s 0.9s;
   overflow: hidden;
-  grid-column: 1 / 2;
+  grid-column: 1 / 2; /*each form to go from line1 to line2 horizontally and vertically*/
   grid-row: 1 / 2;
 }
 
@@ -53,36 +54,38 @@ form.sign-up-form {
   opacity: 0;
   z-index: 1;
 }
+/*hide the sign up form and show the sign in one*/
 
 form.sign-in-form {
   z-index: 2;
 }
 
 .title {
-  font-size: 2.2rem;
-  color: #444;
+  font-size: 60px;
+  color: black;
   margin-bottom: 10px;
 }
 
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: beige;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
   display: grid;
   grid-template-columns: 15% 85%;
-  padding: 0 0.4rem;
+  padding: 0 50px;
   position: relative;
 }
 
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #acacac;
-  transition: 0.5s;
-  font-size: 1.1rem;
+  border-color: #ff6368;
+  color: #ff6368;
+  /*transition: 0.5s;*/
+  font-size: 20px;
 }
 
 .input-field input {
@@ -90,19 +93,31 @@ form.sign-in-form {
   outline: none;
   border: none;
   line-height: 1;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 20px;
+  color: black;
 }
 
 .input-field input::placeholder {
-  color: #aaa;
-  font-weight: 500;
+  color: rgb(30, 31, 36);
+  font-weight: normal;
 }
-
+.icons-wrapper {
+  position: relative;
+}
+.icons-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
 .social-text {
-  padding: 0.7rem 0;
-  font-size: 1rem;
+  padding: 15px 0;
+  font-size: 20px;
 }
 
 .social-media {
@@ -111,18 +126,18 @@ form.sign-in-form {
 }
 
 .social-icon {
-  height: 46px;
-  width: 46px;
+  height: 50px;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0.45rem;
-  color: #333;
-  border-radius: 50%;
-  border: 1px solid #333;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: 0.3s;
+  margin: 0 7px;
+  color: #3f3d56;
+  border-radius: 40%;
+  border: 1px solid #3f3d56;
+  text-decoration: wavy;
+  font-size: 20px;
+  transition: 0.75s;
 }
 
 .social-icon:hover {
@@ -134,12 +149,11 @@ form.sign-in-form {
   width: 150px;
   background-color: #3f3d56;
   border: none;
-  outline: none;
-  height: 49px;
-  border-radius: 49px;
+  height: 50px;
+  border-radius: 50px;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: normal;
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
@@ -154,6 +168,7 @@ form.sign-in-form {
   width: 100%;
   top: 0;
   left: 0;
+  background-color: #fff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -161,15 +176,15 @@ form.sign-in-form {
 .container:before {
   content: "";
   position: absolute;
-  height: 2000px;
-  width: 2000px;
-  top: -10%;
-  right: 48%;
-  transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #ff6368 0%, #ff6368 100%);
+  height: 2200px;
+  width: 1250px;
+  top: 100%;
+  right: 50%;
+  transform: translateY(-90%);
+  background-image: linear-gradient(0deg, #ff6368 20%, blue 100%);
   transition: 1.8s ease-in-out;
-  border-radius: 50%;
-  z-index: 6;
+  border-radius: 40%; /*cat de cerc sa fie*/
+  z-index: 6; /*brings the panel over the forms container*/
 }
 
 .image {
@@ -184,44 +199,48 @@ form.sign-in-form {
   align-items: flex-end;
   justify-content: space-around;
   text-align: center;
-  z-index: 6;
+  z-index: 7; /*brings the panel over the forms container*/
 }
 
 .left-panel {
+  position: relative;
+  align-items: center;
   pointer-events: all;
-  padding: 3rem 17% 2rem 12%;
+  padding: 48px 15%;
 }
 
 .right-panel {
-  pointer-events: none;
-  padding: 3rem 12% 2rem 17%;
+  pointer-events: none; /*because this is over the forms*/
+  align-items: center;
+  padding: 48px 15%;
 }
 
 .panel .content {
+  position: relative;
+  left: 80px;
   color: #fff;
   transition: transform 0.9s ease-in-out;
-  transition-delay: 0.6s;
+  transition-delay: 0.6s; /*in ton cu tranzitia sign ului*/
 }
 
 .panel h3 {
-  font-weight: 600;
+  font-weight: normal;
   line-height: 1;
-  font-size: 1.5rem;
+  font-size: 40px;
 }
 
 .panel p {
-  font-size: 0.95rem;
-  padding: 0.7rem 0;
+  font-size: 25px;
+  padding: 10px 0;
 }
 
-.btn.transparent {
-  margin: 0;
+.btn.transparent:hover {
   background: none;
   border: 2px solid #fff;
   width: 130px;
-  height: 41px;
-  font-weight: 600;
-  font-size: 0.8rem;
+  height: 40px;
+  font-weight: normal;
+  font-size: 15px;
 }
 
 .right-panel .image,
@@ -232,24 +251,26 @@ form.sign-in-form {
 /* ANIMATION */
 
 .container.sign-up-mode:before {
-  transform: translate(100%, -50%);
-  right: 52%;
+  transform: translate(100%, -50%); /*how much the background moves, direction*/
+  right: 50%;
 }
 
 .container.sign-up-mode .left-panel .image,
 .container.sign-up-mode .left-panel .content {
-  transform: translateX(-800px);
+  transform: translateX(
+    -3000px
+  ); /*distanta catre pagina de register minim 800px*/
 }
 
 .container.sign-up-mode .signin-signup {
-  left: 25%;
+  left: 25%; /*pozitionarea registerului*/
 }
 
 .container.sign-up-mode form.sign-up-form {
   opacity: 1;
   z-index: 2;
 }
-
+/*schimb de z-index pt ca sign up sa fie deasupra lui sign in*/
 .container.sign-up-mode form.sign-in-form {
   opacity: 0;
   z-index: 1;
@@ -257,16 +278,21 @@ form.sign-in-form {
 
 .container.sign-up-mode .right-panel .image,
 .container.sign-up-mode .right-panel .content {
-  transform: translateX(0%);
+  transform: translateX(
+    0%
+  ); /*adds the right-panel (register form and the image)*/
 }
 
 .container.sign-up-mode .left-panel {
   pointer-events: none;
 }
-
+/*din cauza ca e pointer set to none la right panel*/
+/*se face trecerea de la pointer events (se inverseaza)*/
 .container.sign-up-mode .right-panel {
   pointer-events: all;
 }
+
+/*responsiveness*/
 
 @media (max-width: 870px) {
   .container {

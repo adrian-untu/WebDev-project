@@ -15,25 +15,20 @@
       <div class="forms-container">
         <!--1st container-->
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form action="check-login.php" method="post" class="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" name = "name" id = "name" size = "25" placeholder="Username" required/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input
-                type="password"
-                autocomplete="off"
-                placeholder="Password"
-                class="password"
-              />
+              <input type="password" autocomplete="off" name = "password" id = "password" size = "25" placeholder="Password" class="password"/>
               <span onclick="togglePass()"
                 ><i class="fa fa-eye-slash"></i
               ></span>
             </div>
-            <input type="submit" value="Login" class="btn solid" />
+            <input type="submit" value="Login" title = "Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
 
             <div class="social-media">

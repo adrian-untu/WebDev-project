@@ -101,19 +101,27 @@ form.sign-in-form {
   color: rgb(30, 31, 36);
   font-weight: normal;
 }
-.icons-wrapper {
-  position: relative;
+.password {
+  padding: 8px;
+  border: 0;
+  width: 200px;
 }
-.icons-wrapper::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  background-color: rgb(37, 37, 37);
-  border-radius: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
+.password:focus {
+  outline: 0;
+}
+.password2 {
+  padding: 8px;
+  border: 0;
+  width: 200px;
+}
+.password2:focus {
+  outline: 0;
+}
+span {
+  float: right;
+  background: #fff;
+  cursor: pointer;
+  padding: 6.5px;
 }
 .social-text {
   padding: 15px 0;

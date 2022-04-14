@@ -7,10 +7,6 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
     <title>Pet Smart Manager Sign in</title>
   </head>
@@ -27,29 +23,30 @@
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input
+                type="password"
+                autocomplete="off"
+                placeholder="Password"
+                class="password"
+              />
+              <span onclick="togglePass()"
+                ><i class="fa fa-eye-slash"></i
+              ></span>
             </div>
             <input type="submit" value="Login" class="btn solid" />
             <p class="social-text">Or Sign in with social platforms</p>
 
             <div class="social-media">
               <a href="#" class="social-icon">
-                <i class="ri-facebook-circle-line icon"></i>
+                <i class="fab fa-facebook"></i>
               </a>
               <a href="#" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>
               <a href="#" class="social-icon">
-                <i class="ri-instagram-line icon"></i>
+                <i class="fab fa-instagram"></i>
               </a>
             </div>
-            <!--
-          <div class="icons-wrapper">
-            <i class=""ri-instagram-line icon"></i>
-            <i class=""ri-facebook-line icon"></i>
-            <i class=""ri-google-line icon"></i>
-          </div>
-        -->
           </form>
           <form action="#" class="sign-up-form">
             <h2 class="title">Create an account</h2>
@@ -59,23 +56,37 @@
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder=" Email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input
+                type="password"
+                autocomplete="off"
+                placeholder="Password"
+                class="password"
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                autocomplete="off"
+                placeholder="Re-type your pass"
+                class="password2"
+              />
             </div>
             <input type="submit" class="btn" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
-                <i class="ri-facebook-circle-line icon"></i>
+                <i class="fab fa-facebook"></i>
               </a>
               <a href="#" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>
               <a href="#" class="social-icon">
-                <i class="ri-instagram-line icon"></i>
+                <i class="fab fa-instagram"></i>
               </a>
             </div>
           </form>

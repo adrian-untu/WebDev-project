@@ -1,130 +1,319 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentation</title>
-</head>
+  </head>
 
-<body>
-    <p><strong>The PET SMART MANAGER project is done by Badarau Dragos and Untu George - Adrian, from group 2A1.</strong></p>
+  <body>
+    <p>
+      <strong
+        >The PET SMART MANAGER project is done by Badarau Dragos and Untu George
+        - Adrian, from group 2A1.</strong
+      >
+    </p>
     <ul>
-        <li>Introduction</li>
+      <li>Introduction</li>
     </ul>
     <ol>
-        <li>Purpose</li>
-        <li>Product scope</li>
+      <li>Purpose</li>
+      <li>Product scope</li>
     </ol>
     <ul>
-        <li>Overall description</li>
+      <li>Overall description</li>
     </ul>
     <ol>
-        <li>Product functions</li>
-        <li>User classes and characteristics</li>
-        <li>Operating environment</li>
-        <li>Design and Implementation Constraints</li>
-        <li>User documentation</li>
-        <li>Assumptions and dependencies</li>
+      <li>Product functions</li>
+      <li>User classes and characteristics</li>
+      <li>Operating environment</li>
+      <li>Design and Implementation Constraints</li>
+      <li>User documentation</li>
+      <li>Assumptions and dependencies</li>
     </ol>
     <ul>
-        <li>External Interface Requirements</li>
+      <li>External Interface Requirements</li>
     </ul>
     <ol>
-        <li>User Interfaces</li>
-        <li>Hardware Interfaces</li>
-        <li>Software Interfaces</li>
-        <li>Communications Interfaces</li>
+      <li>User Interfaces</li>
+      <li>Hardware Interfaces</li>
+      <li>Software Interfaces</li>
+      <li>Communications Interfaces</li>
     </ol>
     <ul>
-        <li>System Features</li>
+      <li>System Features</li>
     </ul>
     <ol>
-        <li>Generate pet profiles</li>
-        <li>Find friends</li>
-        <li>Post to social media</li>
-        <li>Make memories private/public</li>
-        <li>Manage health care and feeding schedule</li>
-        <li>Login</li>
+      <li>Generate pet profiles</li>
+      <li>Find friends</li>
+      <li>Post to social media</li>
+      <li>Make memories private/public</li>
+      <li>Manage health care and feeding schedule</li>
+      <li>Login</li>
     </ol>
     <ul>
-        <li>Other Nonfunctional Requirements</li>
+      <li>Other Nonfunctional Requirements</li>
     </ul>
     <ol>
-        <li>Security Requirements</li>
-        <li>Software Quality Attributes</li>
+      <li>Security Requirements</li>
+      <li>Software Quality Attributes</li>
     </ol>
-    <p><br></p>
+    <p><br /></p>
     <p><strong>1.1 Purpose</strong></p>
-    <p>Develop a web application that allows authenticated users - possibly families - to manage the resources regarding the care of an animal or group of pets.</p>
+    <p>
+      Develop a web application that allows authenticated users - possibly
+      families - to manage the resources regarding the care of an animal or
+      group of pets.
+    </p>
     <p><strong>1.2 Product scope</strong></p>
-    <p>Manage the feeding schedule, restrictions, various multimedia resources (photos, movies, ...) regarding the evolution of the animal, the medical history (including first aid methods), the relationship with other animals will be targeted.</p>
+    <p>
+      Manage the feeding schedule, restrictions, various multimedia resources
+      (photos, movies, ...) regarding the evolution of the animal, the medical
+      history (including first aid methods), the relationship with other animals
+      will be targeted.
+    </p>
     <p><strong>2.1 Product functions</strong></p>
     <p>The user will be able to:</p>
     <ul>
-        <li>Upload images, videos etc about his/her personal pet/s and its evolution in time</li>
-        <li>Monitorize its eating habits, medical history</li>
-        <li>Discover other people which have the same interests or the same kind of pets</li>
-        <li>Post relevant moments on social media</li>
-        <li>Make the memories of the pets public or private depending on the prefferences</li>
-        <li>Overall create an unique and personalized experience for your pets</li>
+      <li>
+        Upload images, videos etc about his/her personal pet/s and its evolution
+        in time
+      </li>
+      <li>Monitorize its eating habits, medical history</li>
+      <li>
+        Discover other people which have the same interests or the same kind of
+        pets
+      </li>
+      <li>Post relevant moments on social media</li>
+      <li>
+        Make the memories of the pets public or private depending on the
+        prefferences
+      </li>
+      <li>
+        Overall create an unique and personalized experience for your pets
+      </li>
     </ul>
     <p><strong>2.2 User classes and characteristics</strong></p>
     <ul>
-        <li>Families</li>
-        <li>Vets</li>
-        <li>Pet owners</li>
+      <li>Families</li>
+      <li>Vets</li>
+      <li>Pet owners</li>
     </ul>
     <p><strong>2.3 Operating environment</strong></p>
     <ul>
-        <li>All the files and contents will be uploaded to a database which stores everything</li>
-        <li>The pages are designed to be used on various devices(phones, laptops, tablets etc) and operating systems</li>
+      <li>
+        All the files and contents will be uploaded to a database which stores
+        everything
+      </li>
+      <li>
+        The pages are designed to be used on various devices(phones, laptops,
+        tablets etc) and operating systems
+      </li>
     </ul>
     <p><strong>2.4 Design and Implementation Constraints</strong></p>
     <ul>
-        <li>In order to give a full experience to the end user, the user interface will consist in HTML5, CSS3, JavaScript and the back-end of the application will consist in PHP scripts, SQL database</li>
-        <li>The admin (the creators of the page) will be responsible for maintaining the delivered software up to date</li>
-        <li>Only the interface scripts will be public, the back-end needs to be private so no user can alter the integrity of the website</li>
+      <li>
+        In order to give a full experience to the end user, the user interface
+        will consist in HTML5, CSS3, JavaScript and the back-end of the
+        application will consist in PHP scripts, SQL database
+      </li>
+      <li>
+        The admin (the creators of the page) will be responsible for maintaining
+        the delivered software up to date
+      </li>
+      <li>
+        Only the interface scripts will be public, the back-end needs to be
+        private so no user can alter the integrity of the website
+      </li>
     </ul>
     <p><strong>2.5 User documentation</strong></p>
     <ul>
-        <li>Admin support via requests or e-mail sent to a specific address</li>
+      <li>Admin support via requests or e-mail sent to a specific address</li>
     </ul>
     <p><strong>2.6 Assumptions and Dependencies</strong></p>
     <ul>
-        <li>Everything is server-based so it shouldn&apos;t be down for a long time when it crashes or has updates ongoing</li>
-        <li>The database should not have any issue with storing the data (storage capacity, file format, wrong places for files)</li>
+      <li>
+        Everything is server-based so it shouldn&apos;t be down for a long time
+        when it crashes or has updates ongoing
+      </li>
+      <li>
+        The database should not have any issue with storing the data (storage
+        capacity, file format, wrong places for files)
+      </li>
     </ul>
     <p><strong>3.1 User interfaces</strong></p>
     <ul>
-        <li>All types of accounts will have access to all of the pages that they are supposed to see (regarding private or public content)</li>
-        <li>The user will always be able to Log Out and the guest will be able to Register/Sign In from the pages</li>
-        <li>Each user will be able to have more pets and the pets will each have a profile of their own, while being able to make friends in the community</li>
-        <li>Users will be notified when any error will appear</li>
-        <li>Users will be able to report any problem to the admin account and the solution will come in a short time no matter the request</li>
-        <li>The admin will have access to all reports and will be able to solve them, also while being able to create tasks of his own, he has access on all pages no matter the restrictions</li>
-        <li>All registered users can add or remove significant memories of their pets, track their evolution and schedule, make posts private or public, post on social media and be free to have a profile configured to their own expectations</li>
+      <li>
+        All types of accounts will have access to all of the pages that they are
+        supposed to see (regarding private or public content)
+      </li>
+      <li>
+        The user will always be able to Log Out and the guest will be able to
+        Register/Sign In from the pages
+      </li>
+      <li>
+        Each user will be able to have more pets and the pets will each have a
+        profile of their own, while being able to make friends in the community
+      </li>
+      <li>Users will be notified when any error will appear</li>
+      <li>
+        Users will be able to report any problem to the admin account and the
+        solution will come in a short time no matter the request
+      </li>
+      <li>
+        The admin will have access to all reports and will be able to solve
+        them, also while being able to create tasks of his own, he has access on
+        all pages no matter the restrictions
+      </li>
+      <li>
+        All registered users can add or remove significant memories of their
+        pets, track their evolution and schedule, make posts private or public,
+        post on social media and be free to have a profile configured to their
+        own expectations
+      </li>
     </ul>
     <p><strong>3.2 Hardware interfaces</strong></p>
     <ul>
-        <li>All device types will be supported</li>
-        <li>The data will be stored on a server-based platform with enough storage to handle all media files</li>
-        <li>All files will be accessed by using scripts that are based on SQL commands</li>
+      <li>All device types will be supported</li>
+      <li>
+        The data will be stored on a server-based platform with enough storage
+        to handle all media files
+      </li>
+      <li>
+        All files will be accessed by using scripts that are based on SQL
+        commands
+      </li>
     </ul>
     <p><strong>3.3 Software interfaces</strong></p>
     <ul>
-        <li>The data is stored in a server-based database and the website will be able to access all needed documents via commands done by a script</li>
-        <li>The website will be accessible from all types of the devices as they will all be made responsive</li>
-        <li>Each and every type of file (video, audio, text) will be added to the needed table of the database via PHP scripts</li>
-        <li>All software components will have access to the required scripts or html/css templates as the pages need to be easy to use and effective in doing their tasks</li>
+      <li>
+        The data is stored in a server-based database and the website will be
+        able to access all needed documents via commands done by a script
+      </li>
+      <li>
+        The website will be accessible from all types of the devices as they
+        will all be made responsive
+      </li>
+      <li>
+        Each and every type of file (video, audio, text) will be added to the
+        needed table of the database via PHP scripts
+      </li>
+      <li>
+        All software components will have access to the required scripts or
+        html/css templates as the pages need to be easy to use and effective in
+        doing their tasks
+      </li>
     </ul>
     <p><strong>3.4 Communications interfaces</strong></p>
     <ul>
-        <li>All websites are on web browsers</li>
-        <li>Admin account will have an e-mail address from which he gets additional tasks from the ones from the reports of the end users</li>
-        <li>All users are registered via e-mail addresses and will get any updates that are made from or to their account (report results, account deletion, new media added by friends, health care and appointments reminders etc)</li>
-        <li>HTTPS will be used, taking into considerations HTTP protocols regarding safety and general use</li>
-        <li>All data will be encrypted so the ones that want to make illegal changes will not be able to</li>
+      <li>All websites are on web browsers</li>
+      <li>
+        Admin account will have an e-mail address from which he gets additional
+        tasks from the ones from the reports of the end users
+      </li>
+      <li>
+        All users are registered via e-mail addresses and will get any updates
+        that are made from or to their account (report results, account
+        deletion, new media added by friends, health care and appointments
+        reminders etc)
+      </li>
+      <li>
+        HTTPS will be used, taking into considerations HTTP protocols regarding
+        safety and general use
+      </li>
+      <li>
+        All data will be encrypted so the ones that want to make illegal changes
+        will not be able to
+      </li>
     </ul>
-</body>
+    <p><strong>4.1 Generate pet profiles</strong></p>
+    <ul>
+      <li>Script to create more profiles via a HTML + CSS template - TBD</li>
+    </ul>
+    <p><strong>4.2 Find friends</strong></p>
+    <ul>
+      <li>Script to find pets that have similar profiles on your own - TBD</li>
+    </ul>
+    <p><strong>4.3 Post on social media</strong></p>
+    <ul>
+      <li>
+        Script to post different content to social media pages via a template -
+        TBD
+      </li>
+    </ul>
+    <p><strong>4.4 Make memories public/private</strong></p>
+    <ul>
+      <li>
+        Select what the prefferences for your posts will be - public/private -
+        TBD
+      </li>
+    </ul>
+    <p><strong>4.5 Manage health care and feeding schedule</strong></p>
+    <ul>
+      <li>
+        Manage health care and feeding schedule and recieve notifications when
+        you need to take care of your pet - TBD
+      </li>
+    </ul>
+    <p><strong>4.6 Login</strong></p>
+    <ul>
+      <li>All registered users are able to login - Done</li>
+    </ul>
+    <p><strong>5.1 Security Requirements</strong></p>
+    <ul>
+      <li>
+        All data will be encrypted so the ones that want to make illegal changes
+        will not be able to
+      </li>
+      <li>
+        We need to take into consideration HTTP protocols when evaluating the
+        security of the website
+      </li>
+    </ul>
+    <p><strong>5.2 Software Quality Attributes</strong></p>
+    <ul>
+      <li>The profiles and pages will be adapted to the end user</li>
+      <li>
+        The content will be available to the end users as the privacy
+        requirements are satisfied
+      </li>
+      <li>All data will be displayed correctly</li>
+      <li>
+        All content can be modified, deleted or new content can be added at any
+        time
+      </li>
+      <li>The data will be maintained by admin at all times</li>
+      <li>
+        The website can be used on all types of devices, being reliable to all
+        users
+      </li>
+      <li>All content will be organised with no imperfections</li>
+      <li>
+        The website will be able to be used by all users, taking into
+        consideration that the interface is easy to understand and use
+      </li>
+    </ul>
+    <p><strong>6.1 References</strong></p>
+    <ul>
+      <li>
+        <a href="https://github.com/rick4470/IEEE-SRS-Tempate#11-purpose%22%3E"
+          >Template</a
+        >
+      </li>
+      <li>
+        <a href="https://profs.info.uaic.ro/~andrei.panu/webprojects.html "
+          >Project</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html"
+          >Project requirements</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/adrian-untu/WebDev-project">GitHub page</a>
+      </li>
+    </ul>
+  </body>
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<meta name = "viewport" content = "width=device-width">
+<link rel="stylesheet" href="css/profilestyle.css" type="text/css">
+<title>Pet profile</title>
+<link rel="icon" href="img/logo.png" type="image/icon" >
+</head>
+<body>
+<?php include ('session.php');?>
+<div class = "header">
+<nav>
+    <img src = "images/logo.png" class = "logo" alt=" ">
+    <ul class = "nav-links">
+        <li><a href="home.php">Home</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="profile.php">My profile</a></li>
+        <li><a href="logout.php" class="logout">Log out</a></li>
+    </ul>
+</nav>
+<div class = "card">
+    <div class = "image">
+        <img src = "images/Loki/Loki2.jpg" alt = "Profile" class = "profile" />
+    </div>
+    <div class = "details">
+        <h2 class = "">Loki</h2>
+        <p class = "text">Hello everyone! My name is Loki, I am a 7 month dog.</p>
+    </div>
+</div>
+<div class = "food-plan">
+    <h3>Food plan</h3>
+    <p class = "description"></p>
+    <ul class = "langs">
+        <li class = "lang">Food plan</li>
+        <li class = "lang">Restrictions</li>
+    </ul>
+</div>
+<div class = "memories">
+    <h3>Memories made by my owner</h3>
+    <p class = "description">These are some memories (photos, videos) that my owner had put up for me:</p>
+    <div class = "photo">
+    <img src="images/Loki/Loki_bath.jpeg" alt="Photo 1">
+    <p style= "float: right; padding: 10px;">Taking a bath...</p>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    </div>
+    <div class = "photo">
+    <img src="images/Loki/Loki_chill.jpeg" alt="Photo 2">
+    <p style= "float: right; padding: 10px;">Chilling...</p>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    </div>
+    <div class = "photo">
+    <img src="images/Loki/Loki_football.jpeg" alt="Photo 3">
+    <p style= "float: right; padding: 10px;">Fusbal</p>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    </div>
+    <div class = "photo">
+    <img src="images/Loki/Loki_out.jpeg" alt="Photo 4">
+    <p style= "float: right; padding: 10px;">No mercy</p>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    </div>
+
+    <ul class = "langs">
+        <li class = "lang">Memories</li>
+        <li class = "lang">Photos</li>
+        <li class = "lang">Videos</li>
+    </ul>
+    </div>
+</div>
+</div>
+</body>
+</html>

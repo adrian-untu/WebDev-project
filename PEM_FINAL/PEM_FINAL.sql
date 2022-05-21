@@ -157,27 +157,23 @@ INSERT INTO `posts` (`post_id`, `user_id`, `post`, `content`, `created`, `privat
 
 CREATE TABLE `user` (
   `user_id` int(100) NOT NULL,
-  `firstname` varchar(100) NOT NULL,
-  `lastname` varchar(100) NOT NULL,
+  `firstname` varchar(100),
+  `lastname` varchar(100),
   `username` varchar(100) NOT NULL,
-  `username2` varchar(100) NOT NULL,
   `birthday` varchar(100) NOT NULL,
-  `gender` varchar(100) NOT NULL,
-  `number` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `email2` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `password2` varchar(100) NOT NULL,
-  `profile_picture` varchar(100) NOT NULL
+  `profile_picture` varchar(100)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `firstname`, `lastname`, `username`, `username2`, `birthday`, `gender`, `number`, `email`, `email2`, `password`, `password2`, `profile_picture`) VALUES
-(1,'Adrian','Untu','adrian_untu','adrian_untu','21/04/2001','Male','+40721372911','adrianuntu2001@gmail.com','adrianuntu2001@gmail.com','12345','12345','upload/Adrian_profile.jpg'),
-(2,'Dragos','Badarau','dragos_badarau','dragos_badarau','07/08/2001', 'Male','+40757411323','dragosb2001@gmail.com','dragosb2001@gmail.com','1234','1234','upload/Dragos_profile.jpg');
+INSERT INTO `user` (`user_id`, `firstname`, `lastname`, `username`, `birthday`,  `email`, `password`, `password2`, `profile_picture`) VALUES
+(1,'Adrian','Untu','adrian_untu','04/21/2001','adrianuntu2001@gmail.com','12345','12345','upload/Adrian_profile.jpg'),
+(2,'Dragos','Badarau','dragos_badarau','08/07/2001','dragosb2001@gmail.com','1234','1234','upload/Dragos_profile.jpg');
 
 --
 -- Indexes for dumped tables

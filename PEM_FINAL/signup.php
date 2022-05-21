@@ -7,12 +7,8 @@
 		$firstname=$_POST['firstname'];
 		$lastname=$_POST['lastname'];
 		$username=$_POST['username'];
-		$username2=$_POST['username2'];
 		$birthday=$_POST['birthday'];
-		$gender=$_POST['gender'];
-		$number=$_POST['number'];
 		$email=$_POST['email'];
-		$email2=$_POST['email2'];
 		$password=$_POST['password'];
 		$password2=$_POST['password2'];
 		$currentDirectory = getcwd();
@@ -56,8 +52,8 @@
 				$sql1=mySQLi_query($con,"select * from user");
 				$count = mySQLi_num_rows($sql1) + 1;
 				$filenames = $uploadDirectory . basename($fileName);
-				mySQLi_query($con,"INSERT INTO user (user_id,firstname,lastname,username,username2,birthday,gender,number,email,email2,password,password2,profile_picture)
-				VALUES ('$count','$firstname','$lastname','$username','$username2','$birthday','$gender','$number','$email','$email2','$password','$password2', '$filenames')");
+				mySQLi_query($con,"INSERT INTO user (user_id,firstname,lastname,username,birthday,email,password,password2,profile_picture)
+				VALUES ('$count',NULL,NULL,'$username','$birthday','$email','$password','$password2', NULL)");
 				echo "<script>alert('Account successfully created!'); window.location='login_register.php'</script>";
 			}
 			

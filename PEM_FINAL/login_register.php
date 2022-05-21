@@ -16,6 +16,7 @@
       <div class="forms-container">
         <!--1st container-->
         <div class="signin-signup">
+          <!-- SIGN IN FORM-->
           <form action="signin.php" method="post" class="sign-in-form" enctype="multipart/form-data">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
@@ -48,43 +49,20 @@
             />
             <input type="reset" name="cancel" value="Cancel" class="btn solid" title="Cancel" />
           </form>
+          <!-- SIGN UP FORM-->
           <form method="post" action="signup.php" enctype="multipart/form-data" class="sign-up-form">
             <h2 class="title">Create an account</h2>
-            <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" name="firstname" placeholder="First Name" autocomplete="off"/>
-            </div>
-            <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" name="lastname" placeholder="Last Name" autocomplete="off"/>
-            </div>
             <div class="input-field">
                 <i class="fas fa-user"></i>
                 <input type="text" name="username" placeholder="Username" autocomplete="off"/>
             </div>
             <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" name="username2" placeholder="Repeat Username" autocomplete="off"/>
-            </div>
-            <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" name="birthday" placeholder="ZZ/MM/AAAA" autocomplete="off"/>
-            </div>
-            <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" name="gender" placeholder="Gender" autocomplete="off"/>
-            </div>
-            <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" name="number" placeholder="Phone Number" autocomplete="off"/>
+                <i class="fas fa-birthday-cake"></i>
+                <input type="date" name="birthday" autocomplete="off"/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
               <input type="email" name="email" placeholder=" Email" autocomplete="off"/>
-            </div>
-            <div class="input-field">
-                <i class="fas fa-envelope"></i>
-                <input type="text" name="email2" placeholder="Repeat Email" autocomplete="off" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
@@ -96,6 +74,7 @@
                 class="password"
               />
             </div>
+
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input
@@ -106,8 +85,10 @@
                 class="password2"
               />
             </div>
+            <!--
             <div class = "text" >Upload Profile Picture</div>
             <input type="file" name="the_file" id="fileToUpload">
+-->
             <input type="submit" name="submit" class="btn" value="Sign up" />
             <input type="reset" name="cancel" value="Cancel" class="btn solid" title="Cancel" />
           </form>

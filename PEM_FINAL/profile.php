@@ -31,41 +31,39 @@
           </li>
         </ul>
       </nav>
-      <div class="card">
-        <div class="image">
-          <img
-            src="upload/Dragos_profile.jpg"
-            alt="Profile"
-            class="profile"
-          />
-        </div>
-        <div class="details">
-          <h2 class="">Dragos</h2>
-          <p class="text">
-            My name is Dragos, I am a 20 years old student at UAIC and my
-            girlfriend has a very energic dog called Loki. You can find out more
-            details about him on the homepage
-          </p>
-        </div>
-      </div>
-      <div class="pet-posts">
-        <div class="pet-posts__img">
-          <img src="upload/Loki2.jpg" alt="" />
-        </div>
-        <div class="pet-posts__info">
-          <div class="pet-posts__date">
-            <span>Friday</span>
-            <span>October 8th 2021</span>
-          </div>
-          <h1 class="pet-posts__title">Loki</h1>
-          <p class="pet-posts__text">
-            He is Loki at about 3 months and he likes football
-          </p>
-          <a href="petprofile.php" class="pet-posts__cta"
-            >Read More about him</a
-          >
-        </div>
-      </div>
-    </div>
+      <?php
+      $result=mysqli_query($con,"SELECT * FROM user where user_id='$id' ");
+      while($test = mysqli_fetch_array($result))
+      {
+        $id = $test['user_id'];
+        echo "<div class='card'>";
+        echo "<div class='image'>";
+        echo " <img src='".$test['profile_picture']. "' alt='Profile' class='profile'/>";
+        echo "</div>";
+        echo "<div class='details'>";
+        echo "<h2 class=''>".$test['firstname']."  " .$test['lastname']."</h2>";
+        echo "<p class='text'>My name is Dragos, I am a 20 years old student at UAIC and my
+        girlfriend has a very energic dog called Loki. You can find out more
+        details about him on the homepage</p>";
+        echo "</div>";
+        echo "</div>";
+      }
+        echo "<div class = 'pet-posts'>";
+        echo "<div class='pet-posts__img'>";
+        echo "<img src='upload/Loki2.jpg' alt='' />";
+        echo "</div>";
+        echo "<div class='pet-posts__info'>";
+        echo "<div class='pet-posts__date'>";
+        echo "<span>Friday</span>";
+        echo "<span>October 8th 2021</span>";
+        echo "</div>";
+        echo "<h1 class='pet-posts__title'>Loki</h1>";
+        echo "<p class='pet-posts__text'>He is Loki at about 3 months and he likes football</p>";
+        echo "<a href='petprofile.php' class='pet-posts__cta'>Read More about him</a>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+      
+      ?>
   </body>
 </html>

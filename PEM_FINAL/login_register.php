@@ -54,7 +54,7 @@
             <h2 class="title">Create an account</h2>
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" name="username" placeholder="Username" autocomplete="off"/>
+                <input type="text" name="username" placeholder="firstname_lastname" autocomplete="off"/>
             </div>
             <div class="input-field">
                 <i class="fas fa-birthday-cake"></i>

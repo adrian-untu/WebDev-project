@@ -38,13 +38,12 @@
         $id = $test['user_id'];
         echo "<div class='card'>";
         echo "<div class='image'>";
-        echo " <img src='".$test['profile_picture']. "' alt='Profile' class='profile'/>";
+        echo " <a href='updatephoto.php' title='Change Profile Picture'><img src='".$test['profile_picture']. "' alt='Profile' class='profile'/></a>";
         echo "</div>";
         echo "<div class='details'>";
-        echo "<h2 class=''>".$test['firstname']."  " .$test['lastname']."</h2>";
-        echo "<p class='text'>My name is Dragos, I am a 20 years old student at UAIC and my
-        girlfriend has a very energic dog called Loki. You can find out more
-        details about him on the homepage</p>";
+        echo "<h2 class=''>".$test['firstname']."  " .$test['lastname']." (".$test['username'].")</h2>";
+        echo "<h2 class=''> Birthday: ".$test['birthday']."</h2>";
+        echo " <a href ='edit_profile.php?user_id=".$test['user_id']."'><button>Edit Profile</button></a>";
         echo "</div>";
         echo "</div>";
       }

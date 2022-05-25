@@ -138,16 +138,16 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `user_id`, `post`, `content`, `created`, `private`) VALUES
-(1, 2, 'upload/Loki_bath.jpeg', 'Taking a bath','2021-10-16 10:23:05', 0),
-(2, 2, 'upload/Loki_chill.jpeg', 'Cilling','2021-11-23 11:25:45', 1),
-(3, 2, 'upload/Loki_football.jpeg', 'Sometimes I am a soccer fan','2021-09-08 18:35:35', 0),
-(4, 2, 'upload/Loki_out.jpeg', 'Out for fun','2021-08-07 19:19:36', 0),
-(5, 1, 'upload/Messy-photo1.jpg', 'Woke up like this','2015-05-06 19:30:30', 1),
-(6, 1, 'upload/Messy-photo2.jpg', 'Goddammit','2016-08-09 12:39:40', 0),
-(7, 1, 'upload/Messy-photo3.jpg', 'Ok, I like this haircut','2014-11-04 21:04:01', 1),
-(8, 1, 'upload/Messy-photo4.jpg', 'New phone who dis','2019-10-15 18:03:22', 0),
-(9, 1, 'upload/Messy-video1.mp4', 'Sleepy','2021-06-15 19:00:00', 0),
-(10, 1, 'upload/Messy-video2.mp4', 'She is home!','2017-08-09 18:55:55', 0);
+(1, 2, 'upload/Loki_bath.jpeg', 'Taking a bath','1634368985', 0),
+(2, 2, 'upload/Loki_chill.jpeg', 'Cilling','1637659545', 1),
+(3, 2, 'upload/Loki_football.jpeg', 'Sometimes I am a soccer fan','1631115335', 0),
+(4, 2, 'upload/Loki_out.jpeg', 'Out for fun','1628353176', 0),
+(5, 1, 'upload/Messy-photo1.jpg', 'Woke up like this','1430929830', 1),
+(6, 1, 'upload/Messy-photo2.jpg', 'Goddammit','1430929830', 0),
+(7, 1, 'upload/Messy-photo3.jpg', 'Ok, I like this haircut','1415127841', 1),
+(8, 1, 'upload/Messy-photo4.jpg', 'New phone who dis','1571151802', 0),
+(9, 1, 'upload/Messy-video1.mp4', 'Sleepy','1623772800', 0),
+(10, 1, 'upload/Messy-video2.mp4', 'She is home!','1502294155', 0);
 
 -- --------------------------------------------------------
 

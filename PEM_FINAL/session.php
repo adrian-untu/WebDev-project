@@ -7,7 +7,6 @@ header('location:index.php');
 $id = $_SESSION['user_id'];
 $query=mysqli_query ($con,"SELECT * FROM user WHERE user_id ='$id'");
 $row=mysqli_fetch_array($query);
-$cover_picture=$row['cover_picture'];
 $profile_picture=$row['profile_picture'];
 $firstname=$row['firstname'];
 $lastname=$row['lastname'];

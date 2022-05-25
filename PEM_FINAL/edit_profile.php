@@ -70,10 +70,10 @@ $birthday_save=$_POST['birthday'];
 		
 		
 		
-		<div id="right-nav">
+		
 			<h1>Edit Info</h1>
 	
-		<div id="left-nav1">
+		
 		
 		<fieldset class="-------------">
 			<table cellpadding="5" cellspacing="5">
@@ -109,10 +109,6 @@ $birthday_save=$_POST['birthday'];
 <br />		
 		<button type="submit" name="save" class="">Save</button>
 
-		
-		</div>
-		
-		</div>
 		
 
 	

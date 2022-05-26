@@ -120,8 +120,8 @@ body {
   float:right;
   width:100px;
   line-height:30px;
-  background-color:#0bacff;
-  border:2px solid #0bacff;
+  background-color:#3f3d56;
+  border:2px solid #ff6368;
   border-radius:100px;
   -webkit-border-radius:100px;
   -moz-border-radius:100px;
@@ -129,9 +129,9 @@ body {
   }
   
   .btn-share:hover {
-  color:#ffffff;
-  background-color:#0488cd;
-  border:2px solid #0488cd;
+  color:#ff6368;
+  background-color:#3f3d56;
+  border:2px solid #ff6368;
   }
   
   #right-nav1 {
@@ -306,8 +306,8 @@ body {
   font-size:20px;
   width:70px;
   font-weight:bold;
-  background-color:#ffffff;
-  border:1px solid #0bacff;
+  background-color:#ff6368;
+  border:1px solid #3f3d56;
   border-radius:5px;
   -webkit-border-radius:5px;
   -moz-border-radius:5px;

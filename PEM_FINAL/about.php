@@ -18,6 +18,7 @@
           </li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="profile.php">My profile</a></li>
+          <li><a href="family.php">My family</a></li>
           <li>
             <a href="logout.php" class="logout"
               >Log out</a

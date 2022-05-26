@@ -298,248 +298,245 @@ img {
     }
     
     #right-nav {
-    float:right;
-    width:800px;
-    background-color:#ffffff;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border:3px solid #CCCCCC;
-    margin-top:10px;
-    }
-    
-    #right-nav h1 {
-    text-indent:10px;
-    }
-    
-    .post-text {
-    width:99%;
-    height:150px;
-    border:3px solid #73cfff;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    font-size:19px;
-    text-indent:5px;
-    }
-    
-    .btn-add-photo {
-    color:#ffffff;
-    font-size:19px;
-    width:200px;
-    line-height:30px;
-    background-color:#0bacff;
-    border:2px solid #0bacff;
-    border-radius:100px;
-    -webkit-border-radius:100px;
-    -moz-border-radius:100px;
-    -o-border-radius:100px;
-    }
-    
-    .btn-add-photo:hover {
-    color:#ffffff;
-    background-color:#0488cd;
-    border:2px solid #0488cd;
-    }
-    
-    .btn-submit-photo {
-    color:#ffffff;
-    font-size:19px;
-    width:150px;
-    background-color:#0bacff;
-    border:2px solid #0bacff;
-    border-radius:100px;
-    -webkit-border-radius:100px;
-    -moz-border-radius:100px;
-    -o-border-radius:100px;
-    }
-    
-    .btn-submit-photo:hover {
-    color:#ffffff;
-    background-color:#0488cd;
-    border:2px solid #0488cd;
-    }
-    
-    #right-nav1 {
-    margin-top: 10px;
-    width: 65.5%;
-    background-color:#ffffff;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border:3px solid #CCCCCC;
-    height: auto;
-    float: right;
-    padding: 7px;
-    }
-    
-    .profile-pics {
-    position:relative;
-    }
-    
-    .profile-pics img {
-    width:70px;
-    height:70px;
-    border:2px solid #CCCCCC;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    }
-    
-    .profile-pics b {
-    color:#000000;
-    text-shadow:1px 1px 1px #73cfff;
-    margin-left:16px;
-    font-size:23px;
-    }
-    
-    .profile-pics strong {
-    color:#000000;
-    margin-left:10px;
-    font-size:20px;
-    }
-    
-    .post-content {
-    width:100%;
-    border:2px solid #CCCCCC;
-    }
-    
-    .post-content p {
-    text-indent:10px;
-    font-size:23px;
-    }
-    
-    .post-content img {
-    border:3px solid #CCCCCC;
-    width:50%;
-    height:50%;
-    }
-    
-    .delete-post {
-    float:right;
-    margin-right:5px;
-    margin-top:5px;
-    }
-    
-    .btn-delete {
-    color:#ffffff;
-    font-size:10px;
-    float:right;
-    width:30px;
-    background-color:#0bacff;
-    border:1px solid #0bacff;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -o-border-radius:5px;
-    }
-    
-    
-    .btn-delete:hover {
-    color:#000000;
-    font-size:10px;
-    width:30px;
-    font-weight:bold;
-    background-color:#ffffff;
-    border:1px solid #0bacff;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -o-border-radius:5px;
-    }
-    
-    /*upload*/
-    
-    .ed{
-    border-style:solid;
-    border-width:thin;
-    border-color:#00CCFF;
-    padding:5px;
-    margin-bottom: 4px;
-    }
-    
-    #button1{
-    text-align:center;
-    font-family:Arial, Helvetica, sans-serif;
-    border-style:solid;
-    border-width:thin;
-    border-color:#00CCFF;
-    padding:5px;
-    background-color:#00CCFF;
-    height: 34px;
-    }
-    
-    #imagelist{
-    border: thin solid silver;
-    float:left;
-    margin:8px 0px 0px 8px;
-    padding:8px;
-    }
-    
-    p{
-    margin:0;
-    padding:0;
-    text-align: center;
-    font-style: italic;
-    font-size: smaller;
-    text-indent: 0;
-    }
-    
-    #caption{
-    margin-top: 5px;
-    color:#ffffff;
-    font-size:23px;
-    }
-    
-    img{
-    height: 150px;
-    width: 180px;
-    }
-    
-    .photo-select {
-    border: thin solid silver;
-    float:left;
-    margin-left:5px;
-    margin-right:5px;
-    margin-bottom:10px;
-    padding:4px;
-    width:180px;
-    }
-    
-    .photo-select img {
-    width:150px;
-    height:150px;
-    border:3px solid #cccccc;
-    }
-    
-    .btn-delete-photos {
-    color:#ffffff;
-    font-size:10px;
-    float:right;
-    width:50px;
-    background-color:#0bacff;
-    border:1px solid #0bacff;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -o-border-radius:5px;
-    text-decoration:none;
-    }
-    
-    .btn-delete-photos a {
-    text-decoration:none;
-    }
-    
-    .btn-delete-photos:hover {
-    color:#000000;
-    font-size:10px;
-    width:50px;
-    font-weight:bold;
-    background-color:#ffffff;
-    border:1px solid #0bacff;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -o-border-radius:5px;
-    text-decoration:none;
-    }
+        float:left;
+        width:100%;
+        background-color:#ff6368;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border:3px solid #ff6368;
+        margin-top:10px;
+        }
+        
+        .post-text {
+        width:99%;
+        height:150px;
+        border:3px solid #73cfff;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        font-size:19px;
+        text-indent:5px;
+        }
+        
+        .btn-add-photo {
+        color:#ffffff;
+        font-size:19px;
+        width:200px;
+        line-height:30px;
+        background-color:#0bacff;
+        border:2px solid #0bacff;
+        border-radius:100px;
+        -webkit-border-radius:100px;
+        -moz-border-radius:100px;
+        -o-border-radius:100px;
+        }
+        
+        .btn-add-photo:hover {
+        color:#ffffff;
+        background-color:#0488cd;
+        border:2px solid #0488cd;
+        }
+        
+        .btn-share {
+        color:#ffffff;
+        font-size:19px;
+        float:right;
+        width:100px;
+        line-height:30px;
+        background-color:#3f3d56;
+        border:2px solid #ff6368;
+        border-radius:100px;
+        -webkit-border-radius:100px;
+        -moz-border-radius:100px;
+        -o-border-radius:100px;
+        }
+        
+        .btn-share:hover {
+        color:#ff6368;
+        background-color:#3f3d56;
+        border:2px solid #ff6368;
+        }
+        
+        #right-nav1 {
+        margin-top: 10px;
+        width: 65.5%;
+        background-color:#3f3d56;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border:3px solid linear-gradient(to bottom, #ff6368 0%, #3f3d56 100%);
+        height: auto;
+        padding: 7px;
+        }
+        
+        .profile-pics {
+        position:relative;
+        }
+        
+        .profile-pics img {
+        width:70px;
+        height:70px;
+        border:2px solid #CCCCCC;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        }
+        
+        .profile-pics b {
+        color:#000000;
+        margin-left:16px;
+        font-size:23px;
+        }
+        
+        .profile-pics strong {
+        color:#000000;
+        margin-left:10px;
+        font-size:20px;
+        }
+        
+        .post-content {
+        width:100%;
+        border:2px solid #CCCCCC;
+        }
+        
+        .post-content p {
+        text-indent:10px;
+        font-size:23px;
+        }
+        
+        .post-content img {
+        border:3px solid #CCCCCC;
+        width:50%;
+        height:50%;
+        }
+        
+        .delete-post {
+            float:right;
+            margin-right:5px;
+            margin-top:5px;
+            }
+            
+            .btn-delete {
+            color:#ffffff;
+            font-size:30px;
+            float:right;
+            width:50%;
+            height:50%;
+            background-color:#ff6368;
+            border:1px solid #3f3d56;
+            border-radius:5px;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            -o-border-radius:5px;
+            }
+            
+            
+            .btn-delete:hover {
+            color:#000000;
+            font-size:30px;
+            width:50%;
+            height:50%;
+            font-weight:bold;
+            background-color:#ff6368;
+            border:1px solid #3f3d56;
+            border-radius:5px;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            -o-border-radius:5px;
+            }
+        h1{
+            color:#cccccc;
+            font-size:20px;
+        }
+        .comment-area {
+        width:70%;
+        background-color:#3f3d56;
+        border:1px solid #cccccc;
+        padding:3px;
+        margin-top:10px;
+        border-radius:5px;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        -o-border-radius:5px;
+        }
+        
+        .comment-area img {
+        width:10%;
+        height:10%;
+        }
+        
+        .user-comment-name {
+        font-weight:bold;
+        font-size:20px;
+        color:#000000;
+        font-size:22px;
+        text-indent:5px;
+        }
+        
+        .user-comment-name img {
+        width:70px;
+        height:70px;
+        margin-top:10px;
+        border:3px solid #CCCCCC;
+        border-radius:9px;
+        }
+        
+        .time-comment {
+        font-size:15px;
+        color:#000000;
+        margin-left:15px;
+        }
+        
+        .comment {
+        font-size:18px;
+        color:#000000;
+        text-indent:15px;
+        margin-top:5px;
+        margin-bottom:5px;
+        }
+        
+        .picture-comment img {
+        width:10%;
+        height:10%;
+        }
+        
+        .comment-text {	
+        border:1px solid #ffffff;
+        font-size:19px;
+        text-indent:5px;
+        width:350px;
+        }
+        
+        .comment-display {
+        width:100%;
+        background-color:#ffffff;
+        border:2px solid #cccccc;
+        margin-top:10px;
+        }
+        
+        .btn-comment {
+        color:#ffffff;
+        font-size:20px;
+        width:70px;
+        background-color:#ff6368;
+        border:1px solid #3f3d56;
+        border-radius:5px;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        -o-border-radius:5px;
+        }
+        
+        
+        .btn-comment:hover {
+        color:#000000;
+        font-size:20px;
+        width:70px;
+        font-weight:bold;
+        background-color:#ff6368;
+        border:1px solid #3f3d56;
+        border-radius:5px;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        -o-border-radius:5px;
+        }

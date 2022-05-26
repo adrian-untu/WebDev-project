@@ -114,6 +114,7 @@ if($years==1)
           <li><a href="about.php">About</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="profile.php">My profile</a></li>
+		  <li><a href="family.php">My family</a></li>
           <li><a href="logout.php" class="logout">Log out</a></li>
         </ul>
       </nav>
@@ -155,9 +156,6 @@ if($years==1)
 			</div>
 		<br />
 			<div class="post-content">
-				<div class="delete-post">
-				<a href="delete_post.php<?php echo '?id='.$post_id; ?>" title="Delete your post"><button class="btn-delete">Delete post</button></a>
-				</div>
 			<p><?php echo $row['content']; ?></p>
 		<center>
 			<?php
@@ -175,14 +173,13 @@ if($years==1)
 
 <?php
 	include("includes/database.php");
-	include("includes/database.php");
 	$comment=mySQLi_query($con,"SELECT * from comments where post_id='$post_id' order by post_id DESC");
 	while($row=mySQLi_fetch_array($comment)){
 	$comment_id=$row['comment_id'];
 	$content_comment=$row['content_comment'];
 		$time=$row['created'];	
 	$post_id=$row['post_id'];
-	$user=$_SESSION['id'];
+	$user=$_SESSION['user_id'];
 	
 ?>			
 	<div class="comment-display"<?php echo $comment_id ?>>

@@ -115,7 +115,7 @@ if($years==1)
     
     <link rel="stylesheet" href="css/profilestyle.css" />
     <link rel="icon" href="img/logo.png" type="image/icon" />
-    <title>My profile</title>
+    <title>Profile</title>
 </head>
   <body>
   <?php include ('session.php');?>
@@ -140,6 +140,7 @@ if($years==1)
       <?php
       if(preg_match_all('/\d+/', $url, $numbers))
       $id1 = end($numbers[0]);
+      $id2 = $row['user_id'];
       $result=mysqli_query($con,"SELECT * FROM user where user_id='$id1' ");
       while($test = mysqli_fetch_array($result))
       {
@@ -157,14 +158,6 @@ if($years==1)
       }
       
       ?>
-			<h1>Update Status</h1>
-	<div>
-			<form method="post" action="post.php" enctype="multipart/form-data">
-				<textarea placeholder="Whats on your mind?" name="content" class="post-text" required></textarea>
-				<input type="file" name="image">
-				<button class="btn-share" name="Submit" value="Log out">Share</button>
-			</form>
-	</div>
     <?php
 	include("includes/database.php");
 			$query=mySQLi_query($con,"SELECT * from user where user_id='$id' order by user_id DESC");
@@ -176,7 +169,7 @@ if($years==1)
 ?>
     <?php
 	include("includes/database.php");
-			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where user.user_id = ".$id." order by created DESC";
+			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where user.user_id = ".$id." and posts.private=0 order by created DESC";
 			$query=mySQLi_query($con,$line);
 			while($row=mySQLi_fetch_array($query)){
 				$posted_by = $row['firstname']." ".$row['lastname'];
@@ -185,22 +178,16 @@ if($years==1)
 				$content=$row['content']; 
 				$post_id = $row['post_id'];
 				$time=$row['created'];
-        $privacy=$row['private'];
+                $privacy=$row['private'];
 ?>
 		<div id="right-nav1">
 			<div class="profile-pics">
 			<img src="<?php echo $profile_picture ?>">
 			<b><?php echo $posted_by ?></b>
 			<strong><?php echo $time = time_stamp($time); ?></strong>
-      <h1><?php if($privacy=='1') echo 'PRIVATE';
-      else echo 'PUBLIC';?></h1>
 			</div>
 		<br />
 			<div class="post-content">
-				<div class="delete-post">
-				<a href="delete_post.php<?php echo '?id='.$post_id; ?>" title="Delete your post"><button class="btn-delete">Delete post</button></a>
-				<a href="edit_privacy.php<?php echo '?id='.$post_id; ?>" title="Delete your post"><button class="btn-delete">Change privacy</button></a>
-				</div>
 			<p><?php echo $row['content']; ?></p>
 		<center>
 			<?php
@@ -240,13 +227,11 @@ if($years==1)
 <?php
 }
 ?>
-			
-      <a href="share_post.php" title="Share to Facebook"><button class="fa fa-facebook"></button></a>
-      <h1>Share to Facebook</h1>
+		
 		 <form  method="POST" action="comment.php">			
 			<div class="comment-area">
 			
-						<?php $image=mysqli_query($con,"select * from user where user_id='$id'");
+						<?php $image=mysqli_query($con,"select * from user where user_id='$id2'");
 							while($row=mysqli_fetch_array($image)){
 							
 

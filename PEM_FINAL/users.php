@@ -41,7 +41,7 @@ if (isset($_POST["search"])) {
     </div>
     <div class='users__info'>
       <h1 class='users__title'>".$r["firstname"]." ".$r["lastname"]."</h1>
-      <a href='profile.php' class='users__cta'
+      <a href='other_profile.php?id=".$r['user_id']."' class='users__cta'
         >Read More about him</a
       >
     </div>

@@ -111,6 +111,11 @@ if($years==1)
       <nav>
         <img src="img/logo.png" class="logo" alt="" />
         <ul class="nav-links">
+		  <li> <form method="post" action="users.php">
+  <input type="text" name="search" required/>
+  <input type="submit" class="btn-share" value="Search"/>
+</form>
+</li>
           <li><a href="about.php">About</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="profile.php">My profile</a></li>
@@ -124,7 +129,7 @@ if($years==1)
 			<form method="post" action="post.php" enctype="multipart/form-data">
 				<textarea placeholder="Whats on your mind?" name="content" class="post-text" required></textarea>
 				<input type="file" name="image">
-				<button class="btn-share" name="Submit" value="Log out">Share</button>
+				<button class="btn-share" name="Submit" value="Share">Share</button>
 			</form>
 	</div>
     <?php

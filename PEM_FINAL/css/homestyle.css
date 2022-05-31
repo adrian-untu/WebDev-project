@@ -72,7 +72,14 @@ body {
 .nav-links li a:hover::after {
   width: 100%;
 }
-  
+.nav-links input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
   #right-nav {
   float:left;
   width:100%;
@@ -312,6 +319,79 @@ body {
   -webkit-border-radius:5px;
   -moz-border-radius:5px;
   -o-border-radius:5px;
+  }
+  .search-photo{
+    width: 20%;
+    height:20%;
+  }
+  .users {
+    width: 100%;
+    max-width: 2000px;
+    padding: 10px;
+    display: flex; /*want to set the card in the middle*/
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.8rem;
+  }
+  .users__img {
+    min-width: 20rem;
+    max-width: 50rem;
+    height: 30rem;
+    transform: translateX(-50px); /*overlap*/
+    position: relative;
+  }
+  .users__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10%;
+  }
+  .users__img:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to_right, #ff6368, #3f3d56);
+    box-shadow: 0.5rem 0.5rem 3rem 1px;
+    border-radius: 0;
+  }
+  .users__date span {
+    display: block; /*on top of each other*/
+    font-size: 20px;
+    color: gray;
+    margin: 0.5rem 0;
+    padding: 0px;
+  }
+  
+  .users__title {
+    font-size: 40px;
+    margin: 0px 0 20px;
+    color: black;
+    padding: 0px;
+  }
+  .users__text {
+    margin-bottom: 48px;
+    font-size: 20px;
+    padding: 0px;
+  }
+  .users__cta {
+    display: inline-flex;
+    padding: 20px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: white;
+    background: linear-gradient(to bottom, #3f3d56 0%, #ff6368 100%);
+    border-radius: 0.8rem;
+    text-decoration: none;
+  }
+  .users__cta:hover {
+    background: linear-gradient(to bottom, #ff6368 0%, #3f3d56 100%);
   }
 .logout {
   border-radius: 30px;

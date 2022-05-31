@@ -100,6 +100,7 @@ if($years==1)
       name="viewport"
       content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0,initial-scale=1.0"
     />
+    
     <link rel="stylesheet" href="css/profilestyle.css" />
     <link rel="icon" href="img/logo.png" type="image/icon" />
     <title>My profile</title>
@@ -226,7 +227,8 @@ if($years==1)
 }
 ?>
 			
-
+      <a href="share_post.php" title="Share to Facebook"><button class="fa fa-facebook"></button></a>
+      <h1>Share to Facebook</h1>
 		 <form  method="POST" action="comment.php">			
 			<div class="comment-area">
 			
@@ -246,8 +248,9 @@ if($years==1)
 			
 			</div>
 		</form>
-
+    
               </div>
+              
 		</div>
 	<?php
 	}

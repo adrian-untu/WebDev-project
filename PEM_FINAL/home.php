@@ -108,21 +108,26 @@ if($years==1)
 <?php include ('session.php');?>
 
     <div class="header">
-      <nav>
+      <nav class="up">
         <img src="img/logo.png" class="logo" alt="" />
         <ul class="nav-links">
-		  <li> <form method="post" action="users.php">
-  <input type="text" name="search" required/>
-  <input type="submit" class="btn-share" value="Search"/>
-</form>
-</li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="contact.php">Contact</a></li>
-          <li><a href="profile.php">My profile</a></li>
-		  <li><a href="family.php">My family</a></li>
-          <li><a href="logout.php" class="logout">Log out</a></li>
+		  <li> 
+			  <form method="post" action="users.php">
+  			<input type="text"
+			  class="search-bar" name="search" required/>
+  			<input type="submit" class="btn-search" value="Search"/>
+				</form>
+			</li>
+			<div class="links">
+          	<li><a href="about.php">About</a></li>
+          	<li><a href="contact.php">Contact</a></li>
+          	<li><a href="profile.php">My profile</a></li>
+		  	<li><a href="family.php">Family</a></li>
+          	<li><a href="logout.php" class="logout">Log out</a></li>
+</div>
         </ul>
       </nav>
+
       <div id="right-nav">
 			<h1>Update Status</h1>
 	<div>

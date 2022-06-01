@@ -243,6 +243,7 @@ if($years==1)
 			<input type="hidden" name="post_id" value="<?php echo $post_id ?>">
 			<input type="hidden" name="user_id" value="<?php echo $firstname . ' ' . $lastname  ?>">
 			<input type="hidden" name="image" value="<?php echo $profile_picture  ?>">
+      <input type="hidden" name="url" value="<?php echo $url ?>">
 			<input type="submit" name="post_comment" value="Enter" class="btn-comment">
 			
 			</div>

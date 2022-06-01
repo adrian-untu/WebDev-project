@@ -91,6 +91,14 @@ if($years==1)
  
 } 
 ?>
+<?php  
+        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+             $url = "https://";   
+        else  
+             $url = "http://";   
+        $url.= $_SERVER['HTTP_HOST'];   
+        $url.= $_SERVER['REQUEST_URI'];    
+?>  
 <!DOCTYPE html> 
 <html>
 <head>
@@ -215,7 +223,10 @@ if($years==1)
 ?>			
 	<div class="comment-display"<?php echo $comment_id ?>>
 			<div class="delete-post">
-			<a href="delete_comment.php<?php echo '?id='.$comment_id; ?>" title="Delete your comment"><button class="btn-delete">Delete comment</button></a>
+			<form  method="POST" action="delete_comment.php<?php echo '?id='.$comment_id; ?>">
+        <input type="hidden" name="url" value="<?php echo $url ?>">	
+			  <input type="submit" title="Delete Comment" name="delete_comment" class="btn-delete">
+      </form>
 			</div>
 		<div class="user-comment-name"><img src="<?php echo $row['image']; ?>">&nbsp;&nbsp;&nbsp;<?php echo $row['name']; ?><b class="time-comment"><?php echo $time = time_stamp($time); ?></b></div>
 		<div class="comment"><?php echo $row['content_comment']; ?></div>
@@ -244,6 +255,7 @@ if($years==1)
 			<input type="hidden" name="post_id" value="<?php echo $post_id ?>">
 			<input type="hidden" name="user_id" value="<?php echo $firstname . ' ' . $lastname  ?>">
 			<input type="hidden" name="image" value="<?php echo $profile_picture  ?>">
+      <input type="hidden" name="url" value="<?php echo $url ?>">
 			<input type="submit" name="post_comment" value="Enter" class="btn-comment">
 			
 			</div>

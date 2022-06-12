@@ -111,7 +111,7 @@ if($years==1)
     
     <link rel="stylesheet" href="css/profilestyle.css" />
     <link rel="icon" href="img/logo.png" type="image/icon" />
-    <title>My profile</title>
+    <title>My Profile</title>
 </head>
   <body>
   <?php include ('session.php');?>
@@ -120,12 +120,12 @@ if($years==1)
         <img src="img/logo.png" class="logo" alt="" />
         <ul class="nav-links">
           <li>
-            <a href="home.php">Home Pet Posts</a>
+            <a href="home.php">Home </a>
           </li>
           <li><a href="about.php">About</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="profile.php">My profile</a></li>
-          <li><a href="family.php">My family</a></li>
+          <li><a href="family.php">Family</a></li>
           <li>
             <a href="logout.php" class="logout"
               >Log out</a
@@ -225,7 +225,9 @@ if($years==1)
 			<div class="delete-post">
 			<form  method="POST" action="delete_comment.php<?php echo '?id='.$comment_id; ?>">
         <input type="hidden" name="url" value="<?php echo $url ?>">	
-			  <input type="submit" title="Delete Comment" name="delete_comment" class="btn-delete">
+			  <input type="Submit" title="Delete Comment" name="delete_comment" 
+        value="Delete"
+        class="btn-delete">
       </form>
 			</div>
 		<div class="user-comment-name"><img src="<?php echo $row['image']; ?>">&nbsp;&nbsp;&nbsp;<?php echo $row['name']; ?><b class="time-comment"><?php echo $time = time_stamp($time); ?></b></div>
@@ -238,7 +240,7 @@ if($years==1)
 }
 ?>
 			
-      <a href="share_post.php" title="Share to Facebook"><button class="fa fa-facebook"></button></a>
+      <a href="share_post.php" title="Share to Facebook"><button class="fas fa-facebook"></button></a>
       <h1>Share to Facebook</h1>
 		 <form  method="POST" action="comment.php">			
 			<div class="comment-area">

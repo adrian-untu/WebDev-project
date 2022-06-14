@@ -239,9 +239,9 @@ if($years==1)
 <?php
 }
 ?>
-			
-      <a href="share_post.php" title="Share to Facebook"><button class="fas fa-facebook"></button></a>
-      <h1>Share to Facebook</h1>
+      <a onClick="window.open('https://facebook.com/sharer/sharer.php?&u=<?php echo "https://public.petsmartmanager.com/".$location; ?>','sharer','toolbar=0,status=0,width=1920,height=1080');" href="javascript: void(0)">Share on Facebook</a>
+      <a onClick="window.open('http://twitter.com/intent/tweet?text=<?php echo $content?> &url=<?php echo "https://public.petsmartmanager.com/".$location; ?>','sharer','toolbar=0,status=0,width=1920,height=1080');" href="javascript: void(0)">Share on Twitter</a>
+      <a onClick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=<?php echo "https://public.petsmartmanager.com/".$location; ?>','sharer','toolbar=0,status=0,width=1920,height=1080');" href="javascript: void(0)" >Share on LinkedIn</a>
 		 <form  method="POST" action="comment.php">			
 			<div class="comment-area">
 			

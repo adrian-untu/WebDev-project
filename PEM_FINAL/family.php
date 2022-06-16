@@ -32,8 +32,8 @@
       {
         echo "<div class='card'>";
         echo "<div class='details'>";
-        echo "<h2>Familia ".$test['name']."</h2><br/>";
-        echo "<h2>Membrii:</h2>";
+        echo "<h2>".$test['name']." Family</h2><br/>";
+        echo "<h2>Members:</h2>";
         echo "</div>";
         echo "</div>";
       }
@@ -49,6 +49,24 @@ while($r=mySQLi_fetch_array($result)) {
     <div class='users__info'>
       <h1 class='users__title'>".$r["firstname"]." ".$r["lastname"]."</h1>
       <a href='other_profile.php?id=".$r['user_id']."' class='users__cta'
+        >View profile</a
+      >
+    </div>
+  </div>";
+  }
+?>
+<br/><br/>
+<h2>Pets:</h2>
+<?php
+$result=mysqli_query($con,"SELECT * FROM pets where family_id='$family_id' ");
+while($r=mySQLi_fetch_array($result)) {
+    echo"<div class='users'>
+    <div class='users__img'>
+      <img src='".$r['profile_picture_pet']."' alt='' />
+    </div>
+    <div class='users__info'>
+      <h1 class='users__title'>".$r["name"]."</h1>
+      <a href='petprofile.php?id=".$r['pet_id']."' class='users__cta'
         >View profile</a
       >
     </div>

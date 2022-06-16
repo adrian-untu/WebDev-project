@@ -11,4 +11,5 @@ $profile_picture=$row['profile_picture'];
 $firstname=$row['firstname'];
 $lastname=$row['lastname'];
 $username=$row['username'];
+$family_id=$row['family_id'];
 ?>

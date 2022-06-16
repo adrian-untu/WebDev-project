@@ -187,6 +187,7 @@ if($years==1)
 			<b><?php echo $posted_by ?></b>
 			<strong><?php echo $time = time_stamp($time); ?></strong>
       <h1><?php if($privacy=='1') echo 'PRIVATE';
+      else if($privacy=='2') echo 'ONLY FAMILY';
       else echo 'PUBLIC';?></h1>
 			</div>
 		<br />

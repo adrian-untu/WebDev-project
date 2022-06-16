@@ -7,12 +7,15 @@
                                         $privacy = (int)$row['private'];
                                     }
                                     if($privacy==1){
-									mysqli_query($con,"UPDATE posts SET private = 0 WHERE post_id='".$get_id."'");
+									mysqli_query($con,"UPDATE posts SET private = 2 WHERE post_id='".$get_id."'");
+                                    }
+                                    else if($privacy==2){
+                                    mysqli_query($con,"UPDATE posts SET private = 0 WHERE post_id='".$get_id."'");
                                     }
                                     else{
                                     mysqli_query($con,"UPDATE posts SET private = 1 WHERE post_id='".$get_id."'");
                                     }
 								
-										header('location:profile.php');
+									header('location:profile.php');
 									
 						?>

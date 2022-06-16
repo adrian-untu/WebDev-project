@@ -128,17 +128,43 @@ CREATE TABLE `user` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `password2` varchar(100) NOT NULL,
-  `profile_picture` varchar(100) DEFAULT NULL
+  `profile_picture` varchar(100) DEFAULT NULL,
+  `family_id` int(100)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `firstname`, `lastname`, `username`, `birthday`, `email`, `password`, `password2`, `profile_picture`) VALUES
-(1, 'Adrian', 'Untu', 'adrian_untu', '04/21/2001', 'adrianuntu2001@gmail.com', '12345', '12345', 'upload/Adrian_profile.jpg'),
-(2, 'Dragos', 'Badarau', 'dragos_badarau', '08/07/2001', 'dragosb2001@gmail.com', '1234', '1234', 'upload/Dragos_profile.jpg'),
-(3, 'George', 'Clooney', 'george_clooney', '1996-04-12', 'smth@clooney.com', '12345', '12345', 'upload/default_profile.jpg');
+INSERT INTO `user` (`user_id`, `firstname`, `lastname`, `username`, `birthday`, `email`, `password`, `password2`, `profile_picture`, `family_id`) VALUES
+(1, 'Adrian', 'Untu', 'adrian_untu', '04/21/2001', 'adrianuntu2001@gmail.com', '12345', '12345', 'upload/Adrian_profile.jpg', 1),
+(2, 'Dragos', 'Badarau', 'dragos_badarau', '08/07/2001', 'dragosb2001@gmail.com', '12345', '12345', 'upload/Dragos_profile.jpg', 2),
+(3, 'George', 'Clooney', 'george_clooney', '1996-04-12', 'smth@clooney.com', '12345', '12345', 'upload/default_profile.jpg', 3),
+(4, 'Dana', 'Untu', 'dana_untu', '1975-03-15', 'dana@gmail.com', '12345', '12345', 'upload/default_profile.jpg', 1),
+(5, 'Ana', 'Prodan', 'ana_prodan', '2001-07-22', 'ana@gmail.com', '12345', '12345', 'upload/default_profile.jpg', 2),
+(6, 'Barrack', 'Obama', 'barrack_obama', '1976-04-18', 'barrack@gmail.com', '12345', '12345', 'upload/default_profile.jpg', 4),
+(7, 'Carmen', 'Botosineanu', 'carmen_botosineanu', '2001-04-09', 'carmen@gmail.com', '12345', '12345', 'upload/default_profile.jpg', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `family`
+--
+
+CREATE TABLE `family` (
+  `family_id` int(100) NOT NULL,
+  `name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `family`
+--
+
+INSERT INTO `family` (`family_id`, `name`) VALUES
+(1, 'Untu'),
+(2, 'Badarau'), 
+(3, 'Ionescu'),
+(4, 'Popescu');
 
 -- --------------------------------------------------------
 
@@ -160,6 +186,7 @@ CREATE TABLE `videos` (
 INSERT INTO `videos` (`video_id`, `location`, `user_id`, `date_added`) VALUES
 (1, 'upload/Messy-video1.mp4', 1, '2021-06-15 19:00:00'),
 (2, 'upload/Messy-video2.mp4', 1, '2017-08-09 18:55:55');
+
 
 --
 -- Indexes for dumped tables

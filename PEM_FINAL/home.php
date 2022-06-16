@@ -156,7 +156,7 @@ if($years==1)
 ?>
     <?php
 	include("includes/database.php");
-			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where (posts.private = 0 and user.user_id != ".$id.") or (posts.private = 1 and user.user_id = ".$id.") or (posts.private = 0 and user.user_id = ".$id.") order by created DESC";
+			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where (posts.private = 0 and user.user_id != ".$id.") or (posts.private = 1 and user.user_id = ".$id.") or (posts.private = 0 and user.user_id = ".$id.") or (posts.private = 2 and user.user_id = ".$id.") order by created DESC";
 			$query=mySQLi_query($con,$line);
 			while($row=mySQLi_fetch_array($query)){
 				$posted_by = $row['firstname']." ".$row['lastname'];

@@ -95,24 +95,25 @@ CREATE TABLE `posts` (
   `post` varchar(100) NOT NULL,
   `content` varchar(200) NOT NULL,
   `created` varchar(100) NOT NULL,
-  `private` int(4) NOT NULL
+  `private` int(4) NOT NULL,
+  `family_id` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`post_id`, `user_id`, `pet_id`, `post`, `content`, `created`, `private`) VALUES
-(1, 2, 2, 'upload/Loki_bath.jpeg', 'Taking a bath', '1634368985', 0),
-(2, 2, 2, 'upload/Loki_chill.jpeg', 'Chilling', '1637659545', 1),
-(3, 2, 2, 'upload/Loki_football.jpeg', 'Sometimes I am a soccer fan', '1631115335', 0),
-(4, 2, 2, 'upload/Loki_out.jpeg', 'Out for fun', '1628353176', 0),
-(5, 1, 1, 'upload/Messy-photo1.jpg', 'Woke up like this', '1430929830', 1),
-(6, 1, 1, 'upload/Messy-photo2.jpg', 'Goddammit', '1430929830', 0),
-(7, 1, 1, 'upload/Messy-photo3.jpg', 'Ok, I like this haircut', '1415127841', 1),
-(8, 1, 1, 'upload/Messy-photo4.jpg', 'New phone who dis', '1571151802', 0),
-(9, 1, 1, 'upload/Messy-video1.mp4', 'Sleepy', '1623772800', 0),
-(10, 1, 1, 'upload/Messy-video2.mp4', 'She is home!', '1502294155', 0);
+INSERT INTO `posts` (`post_id`, `user_id`, `pet_id`, `post`, `content`, `created`, `private`, `family_id`) VALUES
+(1, 2, 2, 'upload/Loki_bath.jpeg', 'Taking a bath', '1634368985', 0, 2),
+(2, 2, 2, 'upload/Loki_chill.jpeg', 'Chilling', '1637659545', 1, 2),
+(3, 2, 2, 'upload/Loki_football.jpeg', 'Sometimes I am a soccer fan', '1631115335', 0, 2),
+(4, 2, 2, 'upload/Loki_out.jpeg', 'Out for fun', '1628353176', 0, 2),
+(5, 1, 1, 'upload/Messy-photo1.jpg', 'Woke up like this', '1430929830', 1, 1),
+(6, 1, 1, 'upload/Messy-photo2.jpg', 'Goddammit', '1430929830', 0, 1),
+(7, 1, 1, 'upload/Messy-photo3.jpg', 'Ok, I like this haircut', '1415127841', 1, 1),
+(8, 1, 1, 'upload/Messy-photo4.jpg', 'New phone who dis', '1571151802', 0, 1),
+(9, 1, 1, 'upload/Messy-video1.mp4', 'Sleepy', '1623772800', 0, 1),
+(10, 1, 1, 'upload/Messy-video2.mp4', 'She is home!', '1502294155', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -190,7 +191,7 @@ CREATE TABLE `pets` (
 
 INSERT INTO `pets` (`pet_id`, `name`, `birthday`, `profile_picture_pet`, `family_id`, `history_id`, `food_plan`, `restrictions`) VALUES
 (1, 'Messy', '2011-07-12', 'upload/Messy-profile.jpg', 1, 1, 'Three meals a day in wet food', 'No salt, no chocolate, no sugar'),
-(2, 'Loki', '2020-10-03', 'upload/Loki-profile.jpg', 2, 2, 'Two meals a day, anything I want', 'No restrictions');
+(2, 'Loki', '2020-10-03', 'upload/Loki.jpg', 2, 2, 'Two meals a day, anything I want', 'No restrictions');
 
 -- --------------------------------------------------------
 

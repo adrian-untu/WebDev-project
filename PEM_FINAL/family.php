@@ -32,7 +32,9 @@
       {
         echo "<div class='card'>";
         echo "<div class='details'>";
-        echo "<h2>".$test['name']." Family</h2><br/>";
+        echo "<div class='familyname'>".$test['name']." Family</div><br/>";
+        echo "<a href='add_pet.php?family_id=$family_id' class='users__cta'>Add pet to family</a>
+        <a href='add_user.php?family_id=$family_id' class='users__cta'>Add user to family</a>";
         echo "<h2>Members:</h2>";
         echo "</div>";
         echo "</div>";

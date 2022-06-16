@@ -457,6 +457,13 @@ body {
     background-color: rgba(255, 225, 225, 0.827);
   }
 }
+.familyname {
+  text-align: center;
+  margin-left:40%;
+  margin-right:40%;
+  font-size: 30px;
+  background: linear-gradient(to bottom, #3f3d56 0%, #ff6368 100%);
+}
 
 @media screen and (max-width: 868px) {
   .pet-posts {

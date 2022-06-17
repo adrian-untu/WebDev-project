@@ -12,6 +12,7 @@ $firstname=$test['firstname'];
 $lastname=$test['lastname'];
 $username=$test['username'];
 $birthday=$test['birthday'];
+$old_password=$test['password'];
 
 if(isset($_POST['save']))
 {	
@@ -19,13 +20,40 @@ $first_save=$_POST['firstname'];
 $last_save=$_POST['lastname'];
 $username_save=$_POST['username'];
 $birthday_save=$_POST['birthday'];
+$copy_birthday=$birthday_save;
+list($y,$m,$d) = explode('-', $copy_birthday);
+$old_password_save=$_POST['old_password'];
+$new_password_save=$_POST['new_password'];
 
-	mysqli_query($con,"UPDATE user SET firstname ='$first_save', lastname ='$last_save', username ='$username_save', 
-	birthday ='$birthday_save' WHERE user_id = '$id'");
+if(checkdate($m,$d,$y)==true)
+{
+	mysqli_query($con,"UPDATE user SET firstname ='$first_save', lastname ='$last_save', username ='$username_save', birthday='$birthday_save'
+ WHERE user_id = '$id'");
 	echo "Saved!";
-	
+	header("Location: profile.php");
+	exit();
+}
+
+if($new_password_save=="")
+{	
+	mysqli_query($con,"UPDATE user SET firstname ='$first_save', lastname ='$last_save', username ='$username_save' 
+ WHERE user_id = '$id'");
+	echo "Saved!";
 	header("Location: profile.php");			
 }
+else if($old_password_save==$old_password && $new_password_save!="")
+{
+	mysqli_query($con,"UPDATE user SET firstname ='$first_save', lastname ='$last_save', username ='$username_save', 
+ password='$new_password_save' WHERE user_id = '$id'");
+	echo "Saved!";
+	header("Location: profile.php");	
+}
+else
+	{
+		echo "<script>alert('The old password does not match!'); window.location='edit_profile.php?user_id=".$id."'</script>";
+	} 
+}
+
 
 ?>
 
@@ -67,14 +95,8 @@ $birthday_save=$_POST['birthday'];
 				<a href="updatephoto.php" title="Change Profile Picture"><img src="<?php echo $test['profile_picture'] ?>"></a>
 				</div>
 		</div>
-		
-		
-		
-		
-			<h1>Edit Info</h1>
-	
-		
-		
+
+			<h1>Edit Info</h1>		
 		<fieldset class="-------------">
 			<table cellpadding="5" cellspacing="5">
 
@@ -101,17 +123,27 @@ $birthday_save=$_POST['birthday'];
 			<table cellpadding="5" cellspacing="5">
 				<tr>
 					<td><label>Birthday</label></td>
-					<td><input type="date" name="birthday" value="<?php echo $birthday; ?>" class="form-1" title="Enter your username" required /></td>
+					<td><input type="date" name="birthday" value="<?php echo $birthday; ?>" class="form-1" title="Enter your birthday" /></td>
 				
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset class="---------------">
+			<legend><h1>Change password</h1></legend>
+			<table cellpadding="5" cellspacing="5">
+				<tr>
+					<td><label>Old Password</label></td>
+					<td><input type="password" name="old_password" value="" class="form-1" title="Enter your old password" /></td>
+				</tr>
+				<tr>
+					<td><label>New Password</label></td>
+					<td><input type="password" name="new_password" value="" class="form-1" title="Enter your new password" /></td>
 				</tr>
 			</table>
 		</fieldset>
 <br />		
 		<button type="submit" name="save" class="">Save</button>
 
-		
-
-	
 		
 	</div>
 </div>

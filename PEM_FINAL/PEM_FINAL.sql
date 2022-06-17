@@ -179,21 +179,25 @@ CREATE TABLE `pets` (
   `birthday` varchar(100) NOT NULL,
   `profile_picture_pet` varchar(100) NOT NULL,
   `family_id` int(100) NOT NULL,
-  `history_id` int(100) NOT NULL,
   `food_plan` varchar(1000) NOT NULL,
   `restrictions` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 --
 -- Dumping data for table `family`
 --
 
-INSERT INTO `pets` (`pet_id`, `name`, `birthday`, `profile_picture_pet`, `family_id`, `history_id`, `food_plan`, `restrictions`) VALUES
-(1, 'Messy', '2011-07-12', 'upload/Messy-profile.jpg', 1, 1, 'Three meals a day in wet food', 'No salt, no chocolate, no sugar'),
-(2, 'Loki', '2020-10-03', 'upload/Loki.jpg', 2, 2, 'Two meals a day, anything I want', 'No restrictions');
+INSERT INTO `pets` (`pet_id`, `name`, `birthday`, `profile_picture_pet`, `family_id`, `food_plan`, `restrictions`) VALUES
+(1, 'Messy', '2011-07-12', 'upload/Messy-profile.jpg', 1, 'Three meals a day in wet food', 'No salt, no chocolate, no sugar'),
+(2, 'Loki', '2020-10-03', 'upload/Loki.jpg', 2, 'Two meals a day, anything I want', 'No restrictions');
 
 -- --------------------------------------------------------
-
+CREATE TABLE `medical_history` (
+  `id` int(100) NOT NULL,
+  `pet_id` int(100) NOT NULL,
+  `entry` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Table structure for table `videos`
 --

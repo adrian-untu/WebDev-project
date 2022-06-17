@@ -1,98 +1,6 @@
 <?php
-function time_stamp($session_time) 
-{ 
- 
-$time_difference = time() - $session_time ; 
-$seconds = $time_difference ; 
-$minutes = round($time_difference / 60 );
-$hours = round($time_difference / 3600 ); 
-$days = round($time_difference / 86400 ); 
-$weeks = round($time_difference / 604800 ); 
-$months = round($time_difference / 2419200 ); 
-$years = round($time_difference / 29030400 ); 
-
-if($seconds <= 60)
-{
-echo"$seconds seconds ago"; 
-}
-else if($minutes <=60)
-{
-   if($minutes==1)
-   {
-     echo"one minute ago"; 
-    }
-   else
-   {
-   echo"$minutes minutes ago"; 
-   }
-}
-else if($hours <=24)
-{
-   if($hours==1)
-   {
-   echo"one hour ago";
-   }
-  else
-  {
-  echo"$hours hours ago";
-  }
-}
-else if($days <=7)
-{
-  if($days==1)
-   {
-   echo"one day ago";
-   }
-  else
-  {
-  echo"$days days ago";
-  }
-
-
-  
-}
-else if($weeks <=4)
-{
-  if($weeks==1)
-   {
-   echo"one week ago";
-   }
-  else
-  {
-  echo"$weeks weeks ago";
-  }
- }
-else if($months <=12)
-{
-   if($months==1)
-   {
-   echo"one month ago";
-   }
-  else
-  {
-  echo"$months months ago";
-  }
- 
-   
-}
-
-else
-{
-if($years==1)
-   {
-   echo"one year ago";
-   }
-  else
-  {
-  echo"$years years ago";
-  }
-
-}
- 
-} 
-?>
- <?php  
-        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+include ('time_stamp.php'); 
+	if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
              $url = "https://";   
         else  
              $url = "http://";   
@@ -146,16 +54,6 @@ if($years==1)
 			</form>
 	</div>
     <?php
-	include("includes/database.php");
-			$query=mySQLi_query($con,"SELECT * from user where user_id='$id' order by user_id DESC");
-			while($row=mySQLi_fetch_array($query)){
-				$id = $row['user_id'];
-?>	
-<?php
-}
-?>
-    <?php
-	include("includes/database.php");
 			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where (posts.private = 0 and user.user_id != ".$id.") or (posts.private = 1 and user.user_id = ".$id.") or (posts.private = 0 and user.user_id = ".$id.") or (posts.private = 2 and user.user_id = ".$id.") order by created DESC";
 			$query=mySQLi_query($con,$line);
 			while($row=mySQLi_fetch_array($query)){
@@ -207,7 +105,7 @@ if($years==1)
 				<input type="submit" title="Delete Comment" name="delete_comment" class="btn-delete">
             </form>
 			</div>
-		<div class="user-comment-name"><img src="<?php echo $row['image']; ?>">&nbsp;&nbsp;&nbsp;<?php echo $row['name']; ?><b class="time-comment"><?php echo $time = time_stamp($time); ?></b></div>
+		<div class="user-comment-name"><img src="<?php echo $row['image']; ?>"><?php echo $row['name']; ?><b class="time-comment"><?php echo $time = time_stamp($time); ?></b></div>
 		<div class="comment"><?php echo $row['content_comment']; ?></div>
 	
 	</div>

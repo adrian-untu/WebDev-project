@@ -14,7 +14,7 @@
 							if ($error > 0){
 										die("Error uploading file! Code $error.");
 									}else{
-										if($size > 10000000) //conditions for the file
+										if($size > 10000000000) //conditions for the file
 										{
 										die("Format is not allowed or file size is too big!");
 										}
@@ -33,9 +33,8 @@
 									VALUES ('$count','$id','$location','$content','$time','0') ");
 
 									}
-										header('location:home.php');
-									
-									
+										header('location:profile.php');
+
 									}
 							}
 ?>

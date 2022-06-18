@@ -71,15 +71,18 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 			<div class="post-content">
 			<p><?php echo $row['content']; ?></p>
 		<center>
-			<?php
+		<?php
 			$fileEnd = explode(".",$location);
 			$file_extension = end($fileEnd);
-			if($file_extension =="mp4")
+			if($file_extension =="mp4" || $file_extension =="webm")
 			{
-			echo "<video controls> <source src='".$location."' type='video/mp4'> Your browser does not support the video tag. </video>";
+			echo "<video controls> <source src='".$location."' type='video/".$file_extension."'> Your browser does not support the video tag. </video>";
+			}
+			else if ($file_extension =="mp3" || $file_extension =="ogg" || $file_extension =="wav" )
+			{ echo "<audio controls> <source src='".$location."' type='audio/".$file_extension."'> Your browser does not support the audio tag. </audio>";
 			}
 			else
-			echo "<img src='".$location."'>"
+			echo "<img src='".$location."'>";
 			?>
 			
 		</center>

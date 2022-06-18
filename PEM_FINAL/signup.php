@@ -49,10 +49,11 @@
 			}
         else
 			{
+				$md5_pass=md5($password);
 				$sql1=mySQLi_query($con,"select * from user");
-				$count = mySQLi_num_rows($sql1) + 1;
+				$count = mySQLi_num_rows($sql1) + 2;
 				mySQLi_query($con,"INSERT INTO user (user_id,firstname,lastname,username,birthday,email,password,profile_picture,family_id)
-				VALUES ('$count','$firstname','$lastname','$username','$birthday','$email','$password', 'upload/default_profile.jpg', '0')");
+				VALUES ('$count','$firstname','$lastname','$username','$birthday','$email','$md5_pass', 'upload/default_profile.jpg', '0')");
 				echo "<script>alert('Account successfully created!'); window.location='login_register.php'</script>";
 			}
 	}

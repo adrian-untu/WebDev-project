@@ -96,15 +96,22 @@ include ('time_stamp.php');
 		$time=$row['created'];	
 	$post_id=$row['post_id'];
 	$user=$_SESSION['user_id'];
-	
-?>			
+	$posted_by=$row['user_id'];
+	?>
 	<div class="comment-display"<?php echo $comment_id ?>>
+	<?php
+	if($posted_by==$user)
+	{
+
+?>			
+	
 			<div class="delete-post">
 			<form  method="POST" action="delete_comment.php<?php echo '?id='.$comment_id; ?>">
             	<input type="hidden" name="url" value="<?php echo $url ?>">	
-				<input type="submit" title="Delete Comment" name="delete_comment" class="btn-delete">
+				<input type="submit" title="Delete Comment" name="delete_comment" value="Delete" class="btn-delete">
             </form>
 			</div>
+			<?php } ?>
 		<div class="user-comment-name"><img src="<?php echo $row['image']; ?>"><?php echo $row['name']; ?><b class="time-comment"><?php echo $time = time_stamp($time); ?></b></div>
 		<div class="comment"><?php echo $row['content_comment']; ?></div>
 	

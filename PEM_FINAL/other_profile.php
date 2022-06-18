@@ -67,15 +67,6 @@ include ('time_stamp.php');
       ?>
     <?php
 	include("includes/database.php");
-			$query=mySQLi_query($con,"SELECT * from user where user_id='$id' order by user_id DESC");
-			while($row=mySQLi_fetch_array($query)){
-				$id = $row['user_id'];
-?>	
-<?php
-}
-?>
-    <?php
-	include("includes/database.php");
 			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where user.user_id = ".$id." and posts.private=0 order by created DESC";
 			$query=mySQLi_query($con,$line);
 			while($row=mySQLi_fetch_array($query)){
@@ -119,12 +110,22 @@ include ('time_stamp.php');
 		$time=$row['created'];	
 	$post_id=$row['post_id'];
 	$user=$_SESSION['user_id'];
-	
-?>			
+	$posted_by=$row['user_id'];
+	?>
 	<div class="comment-display"<?php echo $comment_id ?>>
+	<?php
+	if($posted_by==$user)
+	{
+
+?>			
+	
 			<div class="delete-post">
-			<a href="delete_comment.php<?php echo '?id='.$comment_id; ?>" title="Delete your comment"><button class="btn-delete">Delete comment</button></a>
+			<form  method="POST" action="delete_comment.php<?php echo '?id='.$comment_id; ?>">
+            	<input type="hidden" name="url" value="<?php echo $url ?>">	
+				<input type="submit" title="Delete Comment" name="delete_comment" value="Delete" class="btn-delete">
+            </form>
 			</div>
+			<?php } ?>
 		<div class="user-comment-name"><img src="<?php echo $row['image']; ?>">&nbsp;&nbsp;&nbsp;<?php echo $row['name']; ?><b class="time-comment"><?php echo $time = time_stamp($time); ?></b></div>
 		<div class="comment"><?php echo $row['content_comment']; ?></div>
 	

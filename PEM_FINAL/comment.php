@@ -4,7 +4,7 @@
 	
 	if (isset($_POST['post_comment']))
 	{
-		$user=$_SESSION['id'];
+		$user=$_SESSION['user_id'];
 		$content_comment=$_POST['content_comment'];
 		$post_id=$_POST['post_id'];
 		$user_id=$_POST['user_id'];

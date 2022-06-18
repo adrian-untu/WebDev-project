@@ -24,18 +24,20 @@ include ('time_stamp.php');
 </head>
 <body>
 <?php include ('session.php');?>
-<div class = "header">
-<nav>
-    <img src = "img/logo.png" class = "logo" alt=" ">
-    <ul class = "nav-links">
-        <li><a href="home.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="contact.php">Contact</a></li>
-        <li><a href="profile.php">My profile</a></li>
-        <li><a href="family.php">Family</a></li>
-        <li><a href="logout.php" class="logout">Log out</a></li>
-    </ul>
-</nav>
+
+    <div class="header">
+      <nav class="up">
+        <img src="img/logo.png" class="logo" alt="" />
+        <ul class="nav-links">
+			<div class="links">
+          	<li><a href="about.php">About</a></li>
+          	<li><a href="contact.php">Contact</a></li>
+          	<li><a href="profile.php">My profile</a></li>
+		  	<li><a href="family.php">Family</a></li>
+          	<li><a href="logout.php" class="logout">Log out</a></li>
+</div>
+        </ul>
+      </nav>
 <?php 
 $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_id = $family_id");
       while($test = mysqli_fetch_array($result))
@@ -51,8 +53,18 @@ $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_
         echo "<h2 class=''> Restrictions: ".$test['restrictions']."</h2>";
         echo "</div>";
         echo "</div>";
+		echo "<div id='right-nav'>
+		<h1>Update Status</h1>
+<div>
+		<form method='post' action='post.php' enctype='multipart/form-data'>
+			<textarea placeholder='Whats on your mind?' name='content' class='post-text' required></textarea>
+			<input type='file' name='image'>
+			<input type='hidden' name='url' value='$url'>
+			<button class='btn-share' name='Submit' value='Share'>Share</button>
+		</form>
+</div>";
       }
-$result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = posts.user_id where posts.pet_id='$id_pet' and posts.family_id = '$family_id'");
+$result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = posts.user_id where posts.pet_id='$id_pet' and posts.family_id = '$family_id' order by created desc");
 			while($row=mySQLi_fetch_array($result)){
 				$posted_by = $row['firstname']." ".$row['lastname'];
 				$location = $row['post'];

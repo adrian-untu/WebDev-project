@@ -57,25 +57,7 @@ include ('time_stamp.php');
         echo "</div>";
         echo "</div>";
       }
-      
       ?>
-			<h1>Update Status</h1>
-	<div>
-			<form method="post" action="post.php" enctype="multipart/form-data">
-				<textarea placeholder="Whats on your mind?" name="content" class="post-text" required></textarea>
-				<input type="file" name="image">
-				<button class="btn-share" name="Submit" value="Log out">Share</button>
-			</form>
-	</div>
-    <?php
-	include("includes/database.php");
-			$query=mySQLi_query($con,"SELECT * from user where user_id='$id' order by user_id DESC");
-			while($row=mySQLi_fetch_array($query)){
-				$id = $row['user_id'];
-?>	
-<?php
-}
-?>
     <?php
 	include("includes/database.php");
 			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where user.user_id = ".$id." order by created DESC";
@@ -87,7 +69,7 @@ include ('time_stamp.php');
 				$content=$row['content']; 
 				$post_id = $row['post_id'];
 				$time=$row['created'];
-        $privacy=$row['private'];
+                $privacy=$row['private'];
 ?>
 		<div id="right-nav1">
 			<div class="profile-pics">
@@ -128,7 +110,7 @@ include ('time_stamp.php');
 	while($row=mySQLi_fetch_array($comment)){
 	$comment_id=$row['comment_id'];
 	$content_comment=$row['content_comment'];
-		$time=$row['created'];	
+	$time=$row['created'];	
 	$post_id=$row['post_id'];
 	$user=$_SESSION['user_id'];
 	$posted_by=$row['user_id'];

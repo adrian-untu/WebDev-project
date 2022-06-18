@@ -27,6 +27,7 @@
         </ul>
       </nav>
       <?php
+      if($family_id!=0){
       $result=mysqli_query($con,"SELECT * FROM family where family_id='$family_id' ");
       while($test = mysqli_fetch_array($result))
       {
@@ -75,6 +76,8 @@ while($r=mySQLi_fetch_array($result)) {
     </div>
   </div>";
   }
+}
+else echo "<a href='create_family.php' class='users__cta'>Create family</a>";
 ?>
       </div>
     </div>

@@ -10,7 +10,6 @@
 							$image_name= addslashes($_FILES['image']['name']);
 							$size = $_FILES["image"] ["size"];
 							$error = $_FILES["image"] ["error"];
-
 							if ($error > 0){
 										die("Error uploading file! Code $error.");
 									}else{
@@ -24,16 +23,18 @@
 
 									move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $_FILES["image"]["name"]);			
 									$location="upload/" . $_FILES["image"]["name"];
-									$user=$_SESSION['user_id'];
 									$content=$_POST['content'];
+									$url = $_POST['url'];
 									$time=time();
+									if(preg_match_all('/\d+/', $url, $numbers))
+									$id_pet = end($numbers[0]);
 									$sql1=mySQLi_query($con,"select * from posts");
 				                    $count = mySQLi_num_rows($sql1) + 1;
-									$update=mysqli_query($con," INSERT INTO posts (post_id,user_id,post,content,created,private)
-									VALUES ('$count','$id','$location','$content','$time','0') ");
+									$update=mysqli_query($con," INSERT INTO posts (post_id,user_id,pet_id,post,content,created,private,family_id)
+									VALUES ('$count','$id','$id_pet','$location','$content','$time','0','$family_id') ");
 
 									}
-										header('location:profile.php');
+										header("location:petprofile.php?id=$id_pet");
 
 									}
 							}

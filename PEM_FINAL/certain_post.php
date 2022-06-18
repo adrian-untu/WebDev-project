@@ -1,35 +1,36 @@
-
 <?php
-include ('time_stamp.php'); 
-        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
-             $url = "https://";   
-        else  
-             $url = "http://";   
-        // Append the host(domain name, ip) to the URL.   
-        $url.= $_SERVER['HTTP_HOST'];   
-        
-        // Append the requested resource location to the URL   
-        $url.= $_SERVER['REQUEST_URI'];    
-        if(preg_match_all('/\d+/', $url, $numbers))
-        $id_pet = end($numbers[0]);
-      ?>   
+include ('time_stamp.php');   
+$post_id = $_REQUEST["id"];
+include('includes/database.php');
+include('session.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset = "utf-8">
-<meta name = "viewport" content = "width=device-width">
-<link rel="stylesheet" href="css/profilestyle.css" type="text/css">
-<title>Pet profile</title>
-<link rel="icon" href="img/logo.png" type="image/icon" >
+<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0,initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/homestyle.css" />
+    <link rel="icon" href="img/logo.png" type="image/icon" />
+    <title>View Post</title>
 </head>
 <body>
-<?php include ('session.php');?>
-
     <div class="header">
       <nav class="up">
         <img src="img/logo.png" class="logo" alt="" />
         <ul class="nav-links">
+		  <li> 
+			  <form method="post" action="users.php">
+  			<input type="text"
+			  class="search-bar" name="search" required/>
+  			<input type="submit" class="btn-search" value="Search"/>
+				</form>
+			</li>
 			<div class="links">
+            <li><a href="home.php">Home Pet Posts</a></li>
           	<li><a href="about.php">About</a></li>
           	<li><a href="contact.php">Contact</a></li>
           	<li><a href="profile.php">My profile</a></li>
@@ -38,34 +39,10 @@ include ('time_stamp.php');
 </div>
         </ul>
       </nav>
-<?php 
-$result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_id = $family_id");
-      while($test = mysqli_fetch_array($result))
-      {
-        echo "<div class='card'>";
-        echo "<div class='image'>";
-        echo "<img src='".$test['profile_picture_pet']. "' alt='Profile' class='profile'/>";
-        echo "</div>";
-        echo "<div class='details'>";
-        echo "<h2 class=''>".$test['name']."</h2>";
-        echo "<h2 class=''> Birthday: ".$test['birthday']."</h2>";
-        echo "<h2 class=''> Food planning: ".$test['food_plan']."</h2>";
-        echo "<h2 class=''> Restrictions: ".$test['restrictions']."</h2>";
-        echo "</div>";
-        echo "</div>";
-		echo "<div id='right-nav'>
-		<h1>Update Status</h1>
-<div>
-		<form method='post' action='post.php' enctype='multipart/form-data'>
-			<textarea placeholder='Whats on your mind?' name='content' class='post-text' required></textarea>
-			<input type='file' name='image'>
-			<input type='hidden' name='url' value='$url'>
-			<button class='btn-share' name='Submit' value='Share'>Share</button>
-		</form>
-</div>";
-      }
-$result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = posts.user_id where posts.pet_id='$id_pet' and posts.family_id = '$family_id' order by created desc");
-			while($row=mySQLi_fetch_array($result)){
+      <?php
+			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where posts.post_id = $post_id";
+			$query=mySQLi_query($con,$line);
+			while($row=mySQLi_fetch_array($query)){
 				$posted_by = $row['firstname']." ".$row['lastname'];
 				$location = $row['post'];
 				$profile_picture = $row['profile_picture'];
@@ -83,7 +60,7 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 			<div class="post-content">
 			<p><?php echo $row['content']; ?></p>
 		<center>
-		<?php
+			<?php
 			$fileEnd = explode(".",$location);
 			$file_extension = end($fileEnd);
 			if($file_extension =="mp4" || $file_extension =="webm")
@@ -108,16 +85,23 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 		$time=$row['created'];	
 	$post_id=$row['post_id'];
 	$user=$_SESSION['user_id'];
-	
-?>			
+	$posted_by=$row['user_id'];
+	?>
 	<div class="comment-display"<?php echo $comment_id ?>>
+	<?php
+	if($posted_by==$user)
+	{
+
+?>			
+	
 			<div class="delete-post">
 			<form  method="POST" action="delete_comment.php<?php echo '?id='.$comment_id; ?>">
             	<input type="hidden" name="url" value="<?php echo $url ?>">	
-				<input type="submit" title="Delete Comment" name="delete_comment" class="btn-delete">
+				<input type="submit" title="Delete Comment" name="delete_comment" value="Delete" class="btn-delete">
             </form>
 			</div>
-		<div class="user-comment-name"><img src="<?php echo $row['image']; ?>">&nbsp;&nbsp;&nbsp;<?php echo $row['name']; ?><b class="time-comment"><?php echo $time = time_stamp($time); ?></b></div>
+			<?php } ?>
+		<div class="user-comment-name"><img src="<?php echo $row['image']; ?>"><?php echo $row['name']; ?><b class="time-comment"><?php echo $time = time_stamp($time); ?></b></div>
 		<div class="comment"><?php echo $row['content_comment']; ?></div>
 	
 	</div>
@@ -126,9 +110,7 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 <?php
 }
 ?>
-			<a onClick="window.open('https://facebook.com/sharer/sharer.php?&u=<?php echo "https://public.petsmartmanager.com/certain_post.php?id=$post_id"; ?>','sharer','toolbar=0,status=0,width=1920,height=1080');" href="javascript: void(0)">Share on Facebook</a>
-      <a onClick="window.open('http://twitter.com/intent/tweet?text=<?php echo $content?> &url=<?php echo "https://public.petsmartmanager.com/certain_post.php?id=$post_id"; ?>','sharer','toolbar=0,status=0,width=1920,height=1080');" href="javascript: void(0)">Share on Twitter</a>
-      <a onClick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=<?php echo "https://public.petsmartmanager.com/certain_post.php?id=$post_id"; ?>','sharer','toolbar=0,status=0,width=1920,height=1080');" href="javascript: void(0)" >Share on LinkedIn</a>
+			
 
 		 <form  method="POST" action="comment.php">			
 			<div class="comment-area">
@@ -156,6 +138,7 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 	<?php
 	}
 	?>
-</div>
+      </div>
 </body>
+
 </html>

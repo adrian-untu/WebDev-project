@@ -14,7 +14,7 @@ include ('time_stamp.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0,initial-scale=1.0"
+      content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=0.3,initial-scale=0.5"
     />
     <link rel="stylesheet" href="css/homestyle.css" />
     <link rel="icon" href="img/logo.png" type="image/icon" />

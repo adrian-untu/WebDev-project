@@ -34,7 +34,8 @@
         echo "<div class='details'>";
         echo "<div class='familyname'>".$test['name']." Family</div><br/>";
         echo "<a href='add_pet.php?family_id=$family_id' class='users__cta'>Add pet to family</a>
-        <a href='add_user.php?family_id=$family_id' class='users__cta'>Add user to family</a>";
+        <a href='add_user.php?family_id=$family_id' class='users__cta'>Add user to family</a>
+        <a href='leave_family.php' class='users__cta'>Leave family</a>";
         echo "<h2>Members:</h2>";
         echo "</div>";
         echo "</div>";

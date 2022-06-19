@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="css/profilestyle.css" type="text/css" />
+    <link rel="stylesheet" href="css/medicalhistory.css" type="text/css" />
     <title>Medical History</title>
     <link rel="icon" href="img/logo.png" type="image/icon" />
   </head>
@@ -46,8 +46,8 @@
   <img src='".$r['profile_picture_pet']. "' alt='Profile' class='profile'/>
   </div>
   <div class='details'>
-  <h2 class=''>".$r['name'].", ");
-  echo (time_stamp($r['created'])."</h2>
+  <h2 class=''>".$r['name']."</h2> <br/>");
+  echo ("<h2 class=''>".$r['date']."</h2>
 <br />
   <h2 class=''> Entry: ".$r["entry"]."</h2>
   </div>

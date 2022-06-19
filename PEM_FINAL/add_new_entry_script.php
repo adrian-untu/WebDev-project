@@ -6,7 +6,8 @@ include('session.php');
         $pet_id = $_POST['pet_id'];
         $time=time();
         $entry = $_POST['entry'];
-    mySQLi_query($con,"INSERT INTO medical_history(pet_id,entry,created) VALUES ('$pet_id', '$entry', '$time')");
+        $date=$_POST['date'];
+    mySQLi_query($con,"INSERT INTO medical_history(pet_id,entry,created,date) VALUES ('$pet_id', '$entry', '$time', '$date')");
 	echo "<script>alert('Entry successfully added!'); window.location='view_medical_history.php?pet=$pet_id'</script>";
     }
     ?>

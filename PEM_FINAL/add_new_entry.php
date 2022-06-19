@@ -54,6 +54,13 @@
 				<tr>
 					<td><input type="text" name="entry"  placeholder="Enter text" class="form-1" required /></td>
 				</tr>
+        <tr>
+					<td><label>Entry date</label></td>
+</tr>
+<tr> 
+					<td><input type="date" name="date" value=" "class="form-1" title="Date" /></td>
+				
+				</tr>
 			</table>
 		</fieldset>
 <br />

@@ -31,8 +31,7 @@ include('session.php');
 			</li>
 			<div class="links">
             <li><a href="home.php">Home Pet Posts</a></li>
-          	<li><a href="about.php">About</a></li>
-          	<li><a href="contact.php">Contact</a></li>
+			<li><a href="firstaid.php">First Aid</a></li>
           	<li><a href="profile.php">My profile</a></li>
 		  	<li><a href="family.php">Family</a></li>
           	<li><a href="logout.php" class="logout">Log out</a></li>

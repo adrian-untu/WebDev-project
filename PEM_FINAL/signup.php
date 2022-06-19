@@ -22,6 +22,8 @@
 		}
 
 		$birthday=$_POST['birthday'];
+		$copy_birthday=$birthday;
+		list($y,$m,$d) = explode('-', $copy_birthday);
 		$email=$_POST['email'];
 		$password=$_POST['password'];
 		$password2=$_POST['password2'];

@@ -24,8 +24,7 @@ $copy_birthday=$birthday_save;
 list($y,$m,$d) = explode('-', $copy_birthday);
 $old_password_save=$_POST['old_password'];
 $new_password_save=$_POST['new_password'];
-
-if(checkdate($m,$d,$y)==true)
+if(checkdate($m,$d,$y)==true && $y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m==date("m")&& $d<date("d")))
 {
 	mysqli_query($con,"UPDATE user SET firstname ='$first_save', lastname ='$last_save', username ='$username_save', birthday='$birthday_save'
  WHERE user_id = '$id'");
@@ -33,6 +32,10 @@ if(checkdate($m,$d,$y)==true)
 	header("Location: profile.php");
 	exit();
 }
+else
+{
+	echo "<script>alert('The birthday introduced is invalid!'); window.location='edit_profile.php?user_id=".$id."'</script>";
+} 
 
 if($new_password_save=="")
 {	

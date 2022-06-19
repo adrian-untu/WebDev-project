@@ -55,15 +55,15 @@
             <h2 class="title">Create an account</h2>
             <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" name="username" placeholder="firstname_lastname" autocomplete="off"/>
+                <input type="text" name="username" placeholder="firstname_lastname" autocomplete="off" required/>
             </div>
             <div class="input-field">
                 <i class="fas fa-birthday-cake"></i>
-                <input type="date" name="birthday" autocomplete="off"/>
+                <input type="date" name="birthday" autocomplete="off"required/>
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" name="email" placeholder=" Email" autocomplete="off"/>
+              <input type="email" name="email" placeholder=" Email" autocomplete="off"required/>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
@@ -73,6 +73,7 @@
                 autocomplete="off"
                 placeholder="Password"
                 class="password"
+                required
               />
             </div>
 
@@ -84,12 +85,12 @@
                 autocomplete="off"
                 placeholder="Re-type your pass"
                 class="password2"
+                required
               />
             </div>
             <!--
             <div class = "text" >Upload Profile Picture</div>
-            <input type="file" name="the_file" id="fileToUpload">
--->
+            <input type="file" name="the_file" id="fileToUpload">-->
             <input type="submit" name="submit" class="btn" value="Sign up" />
             <input type="reset" name="cancel" value="Cancel" class="btn solid" title="Cancel" />
           </form>

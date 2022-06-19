@@ -32,8 +32,7 @@
         <img src="img/logo.png" class="logo" alt="" />
         <ul class="nav-links">
 			<div class="links">
-          	<li><a href="about.php">About</a></li>
-          	<li><a href="contact.php">Contact</a></li>
+      <li><a href="firstaid.php">First Aid</a></li>
           	<li><a href="profile.php">My profile</a></li>
 		  	<li><a href="family.php">Family</a></li>
           	<li><a href="logout.php" class="logout">Log out</a></li>

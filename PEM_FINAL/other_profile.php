@@ -34,8 +34,7 @@ include ('time_stamp.php');
           <li>
             <a href="home.php">Home Pet Posts</a>
           </li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="contact.php">Contact</a></li>
+		  <li><a href="firstaid.php">First Aid</a></li>
           <li><a href="profile.php">My profile</a></li>
           <li><a href="family.php">My family</a></li>
           <li>

@@ -18,13 +18,18 @@ if(isset($_POST['save']))
 {	
 $name_save=$_POST['name'];
 $birthday_save=$_POST['birthday'];
+$copy_birthday=$birthday_save;
+list($y,$m,$d) = explode('-', $copy_birthday);
 $profile_picture_pet_save=$_POST['profile_picture_pet'];
 $food_plan_save=$_POST['food_plan'];
 $restrictions_save=$_POST['restrictions'];
+if($y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m=date("m")&& $d<date("d")))
+{
 	mysqli_query($con,"UPDATE pets SET name = '$name_save', birthday = '$birthday_save', food_plan = '$food_plan_save', restrictions = '$restrictions_save' where pet_id = '$id'");
 	echo "Saved!";
 	header("Location: petprofile.php?id=$id");
 	exit(); 
+}
 }
 ?>
 <!DOCTYPE html>
@@ -45,7 +50,7 @@ $restrictions_save=$_POST['restrictions'];
           <li>
             <a href="home.php">Home Pet Posts</a>
           </li>
-          <li><a href="about.php">About</a></li>
+          <li><a href="firstaid.php">First Aid</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="profile.php">My profile</a></li>
           <li><a href="logout.php" class="logout">Log out</a>

@@ -168,6 +168,11 @@ include ('time_stamp.php');
 	<?php
 	}
 	?>
+	
+	<footer>
+	<h1>©Website done by Badarau Dragos and Untu George Adrian, est. 2022</h1>
+</footer>
+</div>
   </div>
   </body>
 </html>

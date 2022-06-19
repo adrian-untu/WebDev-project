@@ -79,6 +79,10 @@ while($r=mySQLi_fetch_array($result)) {
 }
 else echo "<a href='create_family.php' class='users__cta'>Create family</a>";
 ?>
+<footer>
+	<h1>©Website done by Badarau Dragos and Untu George Adrian, est. 2022</h1>
+</footer>
+</div>
       </div>
     </div>
   </body>

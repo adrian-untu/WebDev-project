@@ -43,6 +43,9 @@
         <h3>1. Check it’s safe to approach the animal. If they have been electrocuted, take care not to step into water or touch them when you’re not certain they’ve lost contact with the current.<br/>2. Call out your pets name and pat them gently to see if they respond.<br/>3. Check whether your pet is breathing by holding some fur under its nose and mouth.<br/>4. Perform CPR if you think you can and your pet is not breathing and there is no heartbeat.<br/>5. Keep your pet warm, a foil blanket is especially useful. <br/>6. Call your vet and arrange for them to see your pet.<br/><br/><br/><br/></h3>
       </div>
       </div>
+	<footer>
+	<h1>©Website done by Badarau Dragos and Untu George Adrian, est. 2022</h1>
+</footer>
     </div>
   </body>
 </html>

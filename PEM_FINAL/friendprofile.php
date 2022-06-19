@@ -43,7 +43,7 @@ include ('time_stamp.php');
 $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_id = $family_id");
       while($test = mysqli_fetch_array($result))
       {
-        echo "<div class='card'>";
+        echo "<section><div class='card'>";
         echo "<div class='image'>";
         echo "<img src='".$test['profile_picture_pet']. "' alt='Profile' class='profile'/>";
         echo "</div>";
@@ -54,7 +54,7 @@ $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_
         echo "<h2 class=''> Restrictions: ".$test['restrictions']."</h2>";
 		echo "<a href ='edit_pet_profile.php?pet_id=".$test['pet_id']."'><button>Edit Profile</button></a>";
         echo "</div>";
-        echo "</div>";
+        echo "</div></section>";
       }
 $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = posts.user_id where posts.pet_id='$id_pet' and (posts.private = 0 or posts.private = 2) order by created desc");
 			while($row=mySQLi_fetch_array($result)){
@@ -65,6 +65,7 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 				$post_id = $row['post_id'];
 				$time=$row['created'];	
 ?>
+<article>
 		<div id="right-nav1">
 			<div class="profile-pics">
 			<img src="<?php echo $profile_picture ?>">
@@ -141,9 +142,15 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 
               </div>
 		</div>
+        </article>
 	<?php
 	}
 	?>
+    
+	<footer>
+	<h1>©Website done by Badarau Dragos and Untu George Adrian, est. 2022</h1>
+</footer>
+</div>
 </div>
 </body>
 </html>

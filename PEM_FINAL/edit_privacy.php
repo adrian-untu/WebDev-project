@@ -15,7 +15,6 @@
                                     else{
                                     mysqli_query($con,"UPDATE posts SET private = 1 WHERE post_id='".$get_id."'");
                                     }
-								
 									header('location:profile.php');
 									
 						?>

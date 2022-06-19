@@ -28,6 +28,11 @@
 		</div>
 	</div>
 </section>
+
+<footer>
+	<h4>©Website done by Badarau Dragos and Untu George Adrian, est. 2022</h4>
+</footer>
+</div>
 </body>
 
 </html>

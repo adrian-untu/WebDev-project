@@ -42,7 +42,7 @@ include ('time_stamp.php');
 $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_id = $family_id");
       while($test = mysqli_fetch_array($result))
       {
-        echo "<div class='card'>";
+        echo "<section><div class='card'>";
         echo "<div class='image'>";
         echo "<img src='".$test['profile_picture_pet']. "' alt='Profile' class='profile'/>";
         echo "</div>";
@@ -53,11 +53,11 @@ $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_
         echo "<h2 class=''> Restrictions: ".$test['restrictions']."</h2>";
 		echo "<a href ='edit_pet_profile.php?pet_id=".$test['pet_id']."'><button>Edit Profile</button></a>";
         echo "</div>";
-        echo "</div>";
-		echo "<a href='view_medical_history.php?pet=".$test['pet_id']."' class='users__cta'>View medical history</a>
+        echo "</div></section>";
+		echo "<section><a href='view_medical_history.php?pet=".$test['pet_id']."' class='users__cta'>View medical history</a>
 		<a href='view_friends.php?pet=".$test['pet_id']."' class='users__cta'>View friends</a>
-		<a href='add_friends.php?pet=".$test['pet_id']."' class='users__cta'>Add friends</a>";
-		echo "<div id='right-nav'>
+		<a href='add_friends.php?pet=".$test['pet_id']."' class='users__cta'>Add friends</a></section>";
+		echo "<section><div id='right-nav'>
 		<h1>Update Status</h1>
 <div>
 		<form method='post' action='post.php' enctype='multipart/form-data'>
@@ -66,7 +66,7 @@ $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_
 			<input type='hidden' name='url' value='$url'>
 			<button class='btn-share' name='Submit' value='Share'>Share</button>
 		</form>
-</div>";
+</div></section>";
       }
 $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = posts.user_id where posts.pet_id='$id_pet' and posts.family_id = '$family_id' order by created desc");
 			while($row=mySQLi_fetch_array($result)){
@@ -77,6 +77,7 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 				$post_id = $row['post_id'];
 				$time=$row['created'];	
 ?>
+<article>
 		<div id="right-nav1">
 			<div class="profile-pics">
 			<img src="<?php echo $profile_picture ?>">
@@ -157,9 +158,14 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 
               </div>
 		</div>
+		</article>
 	<?php
 	}
 	?>
+	<footer>
+	<h1>©Website done by Badarau Dragos and Untu George Adrian, est. 2022</h1>
+</footer>
+</div>
 </div>
 </body>
 </html>

@@ -5,7 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+#footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background:#999;
+}
 .content {
   position: relative;
   float: left;

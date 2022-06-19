@@ -157,6 +157,14 @@ body {
     width:70%;
     height:60%;
     }
+    #footer {
+      position:fixed;
+      left:0px;
+      bottom:0px;
+      height:30px;
+      width:100%;
+      background:#999;
+   }
 @media screen and (max-width: 1068px) {
   .pet-posts {
     max-width: 80rem;

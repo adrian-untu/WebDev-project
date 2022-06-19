@@ -46,6 +46,11 @@ while($r=mySQLi_fetch_array($result)) {
   }
 else echo "No results found";
 ?>
+
+<footer>
+	<h1>©Website done by Badarau Dragos and Untu George Adrian, est. 2022</h1>
+</footer>
+</div>
       </div>
     </div>
   </body>

@@ -110,6 +110,10 @@ if($y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m=dat
 		
 	</div>
 </section>
+
+<footer>
+	<h1>©Website done by Badarau Dragos and Untu George Adrian, est. 2022</h1>
+</footer>
 </div>
 </body>
 

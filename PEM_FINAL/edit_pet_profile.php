@@ -10,9 +10,14 @@ if (!$result)
 		}
 $name=$test['name'];
 $birthday=$test['birthday'];
-$profile_picture_pet=$test['profile_picture_pet'];
-$food_plan=$test['food_plan'];
 $restrictions=$test['restrictions'];
+$monday=$test['monday'];
+$tuesday=$test['tuesday'];
+$wednesday=$test['wednesday'];
+$thursday=$test['thursday'];
+$friday=$test['friday'];
+$saturday=$test['saturday'];
+$sunday=$test['sunday'];
 
 if(isset($_POST['save']))
 {	
@@ -20,12 +25,18 @@ $name_save=$_POST['name'];
 $birthday_save=$_POST['birthday'];
 $copy_birthday=$birthday_save;
 list($y,$m,$d) = explode('-', $copy_birthday);
-$profile_picture_pet_save=$_POST['profile_picture_pet'];
-$food_plan_save=$_POST['food_plan'];
 $restrictions_save=$_POST['restrictions'];
+$monday_save=$_POST['monday'];
+$tuesday_save=$_POST['tuesday'];
+$wednesday_save=$_POST['wednesday'];
+$thursday_save=$_POST['thursday'];
+$friday_save=$_POST['friday'];
+$saturday_save=$_POST['saturday'];
+$sunday_save=$_POST['sunday'];
+
 if($y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m=date("m")&& $d<date("d")))
 {
-	mysqli_query($con,"UPDATE pets SET name = '$name_save', birthday = '$birthday_save', food_plan = '$food_plan_save', restrictions = '$restrictions_save' where pet_id = '$id'");
+	mysqli_query($con,"UPDATE pets SET name = '$name_save', birthday = '$birthday_save', restrictions = '$restrictions_save', monday = '$monday_save', tuesday = '$tuesday_save', wednesday = '$wednesday_save', thursday = '$thursday_save', friday = '$friday_save', saturday = '$saturday_save', sunday = '$sunday_save' where pet_id = '$id'");
 	echo "Saved!";
 	header("Location: petprofile.php?id=$id");
 	exit(); 
@@ -87,7 +98,10 @@ if($y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m=dat
 				<tr>
 					<td><label>Birthday</label></td>
 					<td><input type="date" name="birthday" value="<?php echo $birthday; ?>" class="form-1" title="Enter your birthday" /></td>
-				
+				</tr>
+                <tr>
+					<td><label>Name</label></td>
+					<td><input type="text" name="name" value="<?php echo $name; ?>" placeholder="Enter your lastname....." class="form-1" title="Enter your lastname" required /></td>
 				</tr>
 			</table>
 		</fieldset>
@@ -95,16 +109,46 @@ if($y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m=dat
 			<legend><h1>Change informations</h1></legend>
 			<table cellpadding="5" cellspacing="5">
 				<tr>
-					<td><label>Food Plan</label></td>
-					<td><input type="text" name="food_plan" value="<?php echo $food_plan?>" class="form-1"/></td>
-				</tr>
-				<tr>
 					<td><label>Food Restrictions</label></td>
 					<td><input type="text" name="restrictions" value="<?php echo $restrictions?>" class="form-1" /></td>
 				</tr>
 			</table>
 		</fieldset>
 <br />		
+        <fieldset class="---------------">
+			<legend><h1>Food planning</h1></legend>
+			<table cellpadding="5" cellspacing="5">
+				<tr>
+					<td><label>Monday</label></td>
+					<td><input type="text" name="monday" value="<?php echo $monday?>" class="form-1" /></td>
+				</tr>
+                <tr>
+					<td><label>Tuesday</label></td>
+					<td><input type="text" name="tuesday" value="<?php echo $tuesday?>" class="form-1" /></td>
+				</tr>
+                <tr>
+					<td><label>Wednesday</label></td>
+					<td><input type="text" name="wednesday" value="<?php echo $wednesday?>" class="form-1" /></td>
+				</tr>
+                <tr>
+					<td><label>Thursday</label></td>
+					<td><input type="text" name="thursday" value="<?php echo $thursday?>" class="form-1" /></td>
+				</tr>
+                <tr>
+					<td><label>Friday</label></td>
+					<td><input type="text" name="friday" value="<?php echo $friday?>" class="form-1" /></td>
+				</tr>
+                <tr>
+					<td><label>Saturday</label></td>
+					<td><input type="text" name="saturday" value="<?php echo $saturday?>" class="form-1" /></td>
+				</tr>
+                <tr>
+					<td><label>Sunday</label></td>
+					<td><input type="text" name="sunday" value="<?php echo $sunday?>" class="form-1" /></td>
+				</tr>
+			</table>
+		</fieldset>
+<br />	
 		<button type="submit" name="save" class="">Save</button>
 
 		

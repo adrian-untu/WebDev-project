@@ -30,6 +30,7 @@ include ('time_stamp.php');
         <img src="img/logo.png" class="logo" alt="" />
         <ul class="nav-links">
 			<div class="links">
+			<li><a href="home.php">Home Pet Posts</a></li>
           	<li><a href="about.php">About</a></li>
           	<li><a href="contact.php">Contact</a></li>
           	<li><a href="profile.php">My profile</a></li>
@@ -51,8 +52,10 @@ $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_
         echo "<h2 class=''> Birthday: ".$test['birthday']."</h2>";
         echo "<h2 class=''> Food planning: ".$test['food_plan']."</h2>";
         echo "<h2 class=''> Restrictions: ".$test['restrictions']."</h2>";
+		echo "<a href ='edit_pet_profile.php?pet_id=".$test['pet_id']."'><button>Edit Profile</button></a>";
         echo "</div>";
         echo "</div>";
+		echo "<a href='view_medical_history.php?pet=".$test['pet_id']."' class='users__cta'>View medical history</a>";
 		echo "<div id='right-nav'>
 		<h1>Update Status</h1>
 <div>

@@ -194,10 +194,18 @@ INSERT INTO `pets` (`pet_id`, `name`, `birthday`, `profile_picture_pet`, `family
 
 -- --------------------------------------------------------
 CREATE TABLE `medical_history` (
-  `id` int(100) NOT NULL,
   `pet_id` int(100) NOT NULL,
-  `entry` varchar(100) NOT NULL
+  `entry` varchar(100) NOT NULL,
+  `created` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `medical_history` (`pet_id`, `entry`, `created`) VALUES
+(1, 'First time to vet for vaccine', '1415127841'),
+(1, 'Anti rabies vaccine', '1415177841'),
+(1, 'Routine control', '1416127841'),
+(1, 'Broken ribs', '1615127841'),
+(2, 'First time to vet', '1628353176'),
+(2, 'First vaccine', '1628393176');
 --
 -- Table structure for table `videos`
 --

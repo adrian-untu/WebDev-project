@@ -31,23 +31,22 @@
       $result=mysqli_query($con,"SELECT * FROM family where family_id='$family_id' ");
       while($test = mysqli_fetch_array($result))
       {
-        echo "<div class='card'>";
+        echo "<section><div class='card'>";
         echo "<div class='details'>";
         echo "<div class='familyname'>".$test['name']." Family</div><br/>";
         echo "<a href='add_pet.php?family_id=$family_id' class='users__cta'>Add pet to family</a>
         <a href='add_user.php?family_id=$family_id' class='users__cta'>Add user to family</a>
         <a href='leave_family.php' class='users__cta'>Leave family</a>
         <a href='delete_pet.php' class='users__cta'>Delete pet from family</a>";
+        echo "</div>";
+        echo "</div></section>";
         echo "<h2>Members:</h2>";
-        echo "</div>";
-        echo "</div>";
       }
-      
       ?>
       <?php
 $result=mysqli_query($con,"SELECT * FROM user where family_id='$family_id' ");
 while($r=mySQLi_fetch_array($result)) {
-    echo"<div class='users'>
+    echo"<article><div class='users'>
     <div class='users__img'>
       <img src='".$r['profile_picture']."' alt='' />
     </div>
@@ -57,7 +56,7 @@ while($r=mySQLi_fetch_array($result)) {
         >View profile</a
       >
     </div>
-  </div>";
+  </div></article>";
   }
 ?>
 <br/><br/>
@@ -65,7 +64,7 @@ while($r=mySQLi_fetch_array($result)) {
 <?php
 $result=mysqli_query($con,"SELECT * FROM pets where family_id='$family_id' ");
 while($r=mySQLi_fetch_array($result)) {
-    echo"<div class='users'>
+    echo"<article><div class='users'>
     <div class='users__img'>
       <img src='".$r['profile_picture_pet']."' alt='' />
     </div>
@@ -75,7 +74,7 @@ while($r=mySQLi_fetch_array($result)) {
         >View profile</a
       >
     </div>
-  </div>";
+  </div></article>";
   }
 }
 else echo "<a href='create_family.php' class='users__cta'>Create family</a>";

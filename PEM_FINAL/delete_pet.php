@@ -30,7 +30,7 @@
       <?php
   require "search_pets.php";
   if (count($results) > 0) { foreach ($results as $r) {
-    echo("<div class='users'>
+    echo("<article><div class='users'>
     <div class='users__img'>
       <img src='".$r["profile_picture_pet"]."' alt='' />
     </div>
@@ -40,7 +40,7 @@
         >Delete pet</a
       >
     </div>
-  </div>");
+  </div></article>");
   }} else { echo "No results found"; }
 ?>
       </div>

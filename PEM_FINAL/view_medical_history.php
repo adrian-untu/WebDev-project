@@ -41,7 +41,7 @@
   require "view_medical_history_script.php";
   if (count($results) > 0) { foreach ($results as $r) {
     echo(
-  "<div class='card'>
+  "<section><div class='card'>
   <div class='image'>
   <img src='".$r['profile_picture_pet']. "' alt='Profile' class='profile'/>
   </div>
@@ -52,7 +52,7 @@
   <h2 class=''> Entry: ".$r["entry"]."</h2>
   </div>
   <a href='delete_entry.php?created=".$r["created"]."&pet_id=".$id_pet."' class='users__cta'>Delete entry</a>
-  </div>");
+  </div></section>");
   }} else { echo "No results found"; }
 ?>
       </div>

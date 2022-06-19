@@ -52,7 +52,7 @@ include ('time_stamp.php');
       while($test = mysqli_fetch_array($result))
       {
         $id = $test['user_id'];
-        echo "<div class='card'>";
+        echo "<section><div class='card'>";
         echo "<div class='image'>";
         echo "<img src='".$test['profile_picture']. "' alt='Profile' class='profile'/>";
         echo "</div>";
@@ -60,7 +60,7 @@ include ('time_stamp.php');
         echo "<h2 class=''>".$test['firstname']."  " .$test['lastname']." (".$test['username'].")</h2>";
         echo "<h2 class=''> Birthday: ".$test['birthday']."</h2>";
         echo "</div>";
-        echo "</div>";
+        echo "</div></section>";
       }
       
       ?>
@@ -77,6 +77,7 @@ include ('time_stamp.php');
 				$time=$row['created'];
                 $privacy=$row['private'];
 ?>
+<article>
 		<div id="right-nav1">
 			<div class="profile-pics">
 			<img src="<?php echo $profile_picture ?>">
@@ -162,6 +163,7 @@ include ('time_stamp.php');
               </div>
               
 		</div>
+							</article>
 	<?php
 	}
 	?>

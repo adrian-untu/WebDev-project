@@ -25,6 +25,7 @@
           </li>
         </ul>
       </nav>
+      <section>
 <form method="post" enctype="multipart/form-data">
 <input type="file" name="image">
 <input type="submit" value="save" name="image" />
@@ -64,6 +65,7 @@
 						?>
 						</form>
                         </div>
+                        </section>
 </body>
 
 </html>

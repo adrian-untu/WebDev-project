@@ -57,7 +57,7 @@ if($y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m=dat
           </li>
         </ul>
       </nav>
-
+<section>
 	<div id="container">
 	
 		<div id="left-nav">
@@ -109,6 +109,7 @@ if($y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m=dat
 
 		
 	</div>
+</section>
 </div>
 </body>
 

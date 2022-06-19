@@ -21,12 +21,13 @@
     </ul>
 </nav>
 </div>
+<section>
 <div id="container">
 		<div class="image-display">
 				<img src="img/pets.jpg" class="img-style" />
 		</div>
 	</div>
-
+</section>
 </body>
 
 </html>

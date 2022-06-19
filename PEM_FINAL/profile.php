@@ -45,7 +45,7 @@ include ('time_stamp.php');
       while($test = mysqli_fetch_array($result))
       {
         $id = $test['user_id'];
-        echo "<div class='card'>";
+        echo "<section><div class='card'>";
         echo "<div class='image'>";
         echo " <a href='updatephoto.php' title='Change Profile Picture'><img src='".$test['profile_picture']. "' alt='Profile' class='profile'/></a>";
         echo "</div>";
@@ -54,7 +54,7 @@ include ('time_stamp.php');
         echo "<h2 class=''> Birthday: ".$test['birthday']."</h2>";
         echo " <a href ='edit_profile.php?user_id=".$test['user_id']."'><button>Edit Profile</button></a>";
         echo "</div>";
-        echo "</div>";
+        echo "</div></section>";
       }
       ?>
     <?php
@@ -70,6 +70,7 @@ include ('time_stamp.php');
 				$time=$row['created'];
                 $privacy=$row['private'];
 ?>
+<article>
 		<div id="right-nav1">
 			<div class="profile-pics">
 			<img src="<?php echo $profile_picture ?>">
@@ -162,8 +163,8 @@ include ('time_stamp.php');
 		</form>
     
               </div>
-              
 		</div>
+		</article>
 	<?php
 	}
 	?>

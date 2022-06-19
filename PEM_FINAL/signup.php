@@ -20,7 +20,6 @@
 				echo "<script>alert('Your firstname or lastname is invalid! '); window.location='login_register.php'</script>";
 				exit();
 		}
-
 		$birthday=$_POST['birthday'];
 		$copy_birthday=$birthday;
 		list($y,$m,$d) = explode('-', $copy_birthday);
@@ -35,7 +34,6 @@
 				echo "<script>alert('E-mail already taken!'); window.location='login_register.php'</script>";
 				exit();
 			}
-			
 		$sql=mySQLi_query($con,"select * from user WHERE username='$username'");
 		$row=mySQLi_num_rows($sql);
 		if ($row > 0)

@@ -26,6 +26,7 @@
 </div>
         </ul>
       </nav>
+	  <article>
       <div id="container">
 	
 		<div id="left-nav">
@@ -44,7 +45,7 @@
         <button type="submit" class="btn-share" name="submit" value="Submit">Submit</button>
 			</form>
 		</div>
-		
+</article>
 	</div>
 </body>
 </html>

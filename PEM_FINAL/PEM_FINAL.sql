@@ -170,6 +170,25 @@ INSERT INTO `family` (`family_id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `family`
+--
+
+CREATE TABLE `friends` (
+  `friend1` int(100) NOT NULL,
+  `friend2` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `family`
+--
+
+INSERT INTO `friends` (`friend1`, `friend2`) VALUES
+(1, 2),
+(2, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pets`
 --
 

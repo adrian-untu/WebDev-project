@@ -39,20 +39,13 @@
 </div>
         </ul>
       </nav>
+      <article>
       <div id="container">
-	
 		<div id="left-nav">
              <form method="post" action="add_pet_script.php" enctype="multipart/form-data">
                 <h1>Choose profile picture</h1>
 				<input type="file" name="image">
-		
-		
-		
-		
 			<h1>Add Pet</h1>
-	
-		
-		
 		<fieldset class="-------------">
 			<table cellpadding="5" cellspacing="5">
 				<tr>
@@ -88,7 +81,7 @@
         <button type="submit" class="btn-share" name="submit" value="Submit">Submit</button>
 			</form>
 		</div>
-		
+</article>
 	</div>
 </body>
 </html>

@@ -31,7 +31,8 @@ include ('time_stamp.php');
         <ul class="nav-links">
 			<div class="links">
 			<li><a href="home.php">Home Pet Posts</a></li>
-			<li><a href="firstaid.php">First Aid</a></li>
+          	<li><a href="about.php">About</a></li>
+          	<li><a href="contact.php">Contact</a></li>
           	<li><a href="profile.php">My profile</a></li>
 		  	<li><a href="family.php">Family</a></li>
           	<li><a href="logout.php" class="logout">Log out</a></li>
@@ -54,21 +55,8 @@ $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_
 		echo "<a href ='edit_pet_profile.php?pet_id=".$test['pet_id']."'><button>Edit Profile</button></a>";
         echo "</div>";
         echo "</div>";
-		echo "<a href='view_medical_history.php?pet=".$test['pet_id']."' class='users__cta'>View medical history</a>
-		<a href='view_friends.php?pet=".$test['pet_id']."' class='users__cta'>View friends</a>
-		<a href='add_friends.php?pet=".$test['pet_id']."' class='users__cta'>Add friends</a>";
-		echo "<div id='right-nav'>
-		<h1>Update Status</h1>
-<div>
-		<form method='post' action='post.php' enctype='multipart/form-data'>
-			<textarea placeholder='Whats on your mind?' name='content' class='post-text' required></textarea>
-			<input type='file' name='image'>
-			<input type='hidden' name='url' value='$url'>
-			<button class='btn-share' name='Submit' value='Share'>Share</button>
-		</form>
-</div>";
       }
-$result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = posts.user_id where posts.pet_id='$id_pet' and posts.family_id = '$family_id' order by created desc");
+$result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = posts.user_id where posts.pet_id='$id_pet' and (posts.private = 0 or posts.private = 2) order by created desc");
 			while($row=mySQLi_fetch_array($result)){
 				$posted_by = $row['firstname']." ".$row['lastname'];
 				$location = $row['post'];
@@ -130,10 +118,6 @@ $result=mysqli_query($con,"SELECT * FROM posts LEFT JOIN user on user.user_id = 
 <?php
 }
 ?>
-			<a onClick="window.open('https://facebook.com/sharer/sharer.php?&u=<?php echo "https://public.petsmartmanager.com/certain_post.php?id=$post_id"; ?>','sharer','toolbar=0,status=0,width=1920,height=1080');" href="javascript: void(0)">Share on Facebook</a>
-      <a onClick="window.open('http://twitter.com/intent/tweet?text=<?php echo $content?> &url=<?php echo "https://public.petsmartmanager.com/certain_post.php?id=$post_id"; ?>','sharer','toolbar=0,status=0,width=1920,height=1080');" href="javascript: void(0)">Share on Twitter</a>
-      <a onClick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=<?php echo "https://public.petsmartmanager.com/certain_post.php?id=$post_id"; ?>','sharer','toolbar=0,status=0,width=1920,height=1080');" href="javascript: void(0)" >Share on LinkedIn</a>
-
 		 <form  method="POST" action="comment.php">			
 			<div class="comment-area">
 			

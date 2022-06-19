@@ -38,6 +38,7 @@ include('session.php');
 </div>
         </ul>
       </nav>
+	  <article>
       <?php
 			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where posts.post_id = $post_id";
 			$query=mySQLi_query($con,$line);
@@ -137,6 +138,7 @@ include('session.php');
 	<?php
 	}
 	?>
+	</article>
       </div>
 </body>
 

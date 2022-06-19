@@ -30,7 +30,7 @@
       <?php
   require "search_new_users.php";
   if (count($results) > 0) { foreach ($results as $r) {
-    echo("<div class='users'>
+    echo("<article><div class='users'>
     <div class='users__img'>
       <img src='".$r['profile_picture']."' alt='' />
     </div>
@@ -40,7 +40,7 @@
         >Add to family</a
       >
     </div>
-  </div>");
+  </div></article>");
   }} else { echo "No results found"; }
 ?>
       </div>

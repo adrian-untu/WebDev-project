@@ -42,6 +42,7 @@ include ('time_stamp.php');
 </div>
         </ul>
       </nav>
+	  <article>
     <?php
 			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where (posts.private = 0 and user.user_id != ".$id.") or (posts.private = 1 and user.user_id = ".$id.") or (posts.private = 0 and user.user_id = ".$id.") or (posts.private = 2 and user.user_id = ".$id.") order by created DESC";
 			$query=mySQLi_query($con,$line);
@@ -138,6 +139,7 @@ include ('time_stamp.php');
 
               </div>
 		</div>
+		</article>
 	<?php
 	}
 	?>

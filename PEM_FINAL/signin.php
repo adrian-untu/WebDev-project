@@ -9,7 +9,6 @@ include('includes/database.php');
 							$md5_pass=md5($password);
 						{
 							$result = mysqli_query($con,"SELECT * FROM user WHERE username = '$username' and  password='$md5_pass' ");
-							
 							$row = mysqli_fetch_array($result);
 							$count = mysqli_num_rows($result);				
 								if ($count == 0) 

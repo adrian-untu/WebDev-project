@@ -89,7 +89,7 @@ else
           </li>
         </ul>
       </nav>
-
+<section>
 	<div id="container">
 	
 		<div id="left-nav">
@@ -149,6 +149,7 @@ else
 
 		
 	</div>
+</section>
 </div>
 </body>
 

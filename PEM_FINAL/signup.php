@@ -1,7 +1,5 @@
-<?php include ('session.php');?>
 <?php
 	include ('includes/database.php');
-	
 	if (isset($_POST['submit']))
 	{
 		$username=$_POST['username'];
@@ -44,7 +42,7 @@
 			
 		if($password != $password2)
 			{
-			echo "<script>alert('Password do not match!'); window.location='login_register.php'</script>";
+			echo "<script>alert('Passwords do not match!'); window.location='login_register.php'</script>";
 			exit();
 			}
         else

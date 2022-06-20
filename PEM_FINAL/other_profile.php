@@ -66,7 +66,7 @@ include ('time_stamp.php');
       ?>
     <?php
 	include("includes/database.php");
-			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where user.user_id = ".$id." and posts.private=0 order by created DESC";
+			$line = "SELECT * from posts LEFT JOIN user on user.user_id = posts.user_id where user.user_id = ".$id." and ((posts.private=0 and user.family_id!=".$family_id.") or ((posts.private=0 or posts.private=2) and user.family_id = ".$family_id.")) order by created DESC";
 			$query=mySQLi_query($con,$line);
 			while($row=mySQLi_fetch_array($query)){
 				$posted_by = $row['firstname']." ".$row['lastname'];
@@ -119,7 +119,6 @@ include ('time_stamp.php');
 	<?php
 	if($posted_by==$user)
 	{
-
 ?>			
 	
 			<div class="delete-post">

@@ -13,6 +13,7 @@ include('session.php');
         mySQLi_query($con,"DELETE FROM family where family_id = '$family_id'");
         mySQLi_query($con,"UPDATE user SET family_id = '0' WHERE user_id = '$id'");
         mySQLi_query($con,"DELETE FROM posts WHERE user_id = '$id'");
+        mySQLi_query($con,"DELETE FROM pets WHERE family_id = '$family_id'");
         echo "<script>alert('Left family and family deleted!'); window.location='profile.php'</script>";
     }
 ?>

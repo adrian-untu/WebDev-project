@@ -44,7 +44,7 @@ $result=mysqli_query($con,"SELECT * FROM pets where pet_id='$id_pet' and family_
       {
         echo "<section><div class='card'>";
         echo "<div class='image'>";
-        echo "<img src='".$test['profile_picture_pet']. "' alt='Profile' class='profile'/>";
+        echo " <a href='updatepetphoto.php?pet_id=".$test['pet_id']."' title='Change Profile Picture'><img src='".$test['profile_picture_pet']. "' alt='Profile' class='profile'/></a>";
         echo "</div>";
         echo "<div class='details'>";
         echo "<h2 class=''>".$test['name']."</h2><br />";

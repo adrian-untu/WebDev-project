@@ -60,7 +60,7 @@
 									$update1=mysqli_query($con,"UPDATE comments SET image = '$location' WHERE user_id='$user'");
 
 									}
-										header('location:home.php');
+										header('location:profile.php');
 									
 									
 									}

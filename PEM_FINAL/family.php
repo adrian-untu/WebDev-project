@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="css/homestyle.css" type="text/css" />
+    <link rel="stylesheet" href="css/family.css" type="text/css" />
     <title>My family</title>
     <link rel="icon" href="img/logo.png" type="image/icon" />
   </head>

@@ -21,7 +21,7 @@ include ('time_stamp.php');
       content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0,initial-scale=1.0"
     />
     
-    <link rel="stylesheet" href="css/profilestyle.css" />
+    <link rel="stylesheet" href="css/other_profile.css" />
     <link rel="icon" href="img/logo.png" type="image/icon" />
     <title>Profile</title>
 </head>

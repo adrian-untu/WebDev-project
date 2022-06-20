@@ -1,0 +1,398 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  height: 99vh;
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+.up {
+  width: 99%;
+}
+.links {
+  font-size: 30px;
+}
+nav {
+  display: flex;
+  align-items: stretch;
+  position: sticky;
+}
+.logo {
+  width: 40%;
+  height: 50%;
+  max-width: 500px;
+  max-height: 100px;
+}
+h2 {
+  font-size: 40px;
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex; /*want to set the card in the middle*/
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 225, 225, 0.827);
+  padding: 0 0.5rem;
+}
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  background: #999;
+}
+.nav-links {
+  width: 100%;
+  max-width: 2000px;
+  padding: 10px;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+.nav-links li {
+  display: inline-block;
+  justify-content: flex-end;
+  margin: 0 15px;
+}
+.nav-links li a {
+  text-decoration: wavy;
+  color: black;
+  padding: 1px 0;
+  font-size: 30px;
+  position: relative;
+}
+.nav-links li a::after {
+  content: "";
+  background: rgb(0, 0, 0);
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+.nav-links li a:hover::after {
+  width: 100%;
+}
+.nav-links input[type="text"] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+#right-nav {
+  float: left;
+  width: 100%;
+  background-color: rgba(255, 225, 225, 0.827);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  margin-top: 10px;
+}
+
+#right-nav1 {
+  margin-top: 15px;
+  width: 100%;
+  height: 50px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 225, 225, 0.827) 20%,
+    #3f3d56 70%
+  );
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 10px;
+  border: 10px solid linear-gradient(to bottom, #ff6368 0%, #3f3d56 100%);
+  height: auto;
+  padding: 1% 2%;
+}
+
+.profile-pics {
+  position: relative;
+}
+
+.profile-pics img {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #cccccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.post-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 2px solid #cccccc;
+}
+
+.post-content p {
+  text-indent: 10px;
+  font-size: 23px;
+}
+
+.post-content img {
+  border: 3px solid #cccccc;
+  width: 50%;
+  height: 50%;
+}
+
+.users {
+  width: 100%;
+  max-width: 2000px;
+  padding: 10px;
+  display: flex; /*want to set the card in the middle*/
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
+}
+.users__img {
+  min-width: 20rem;
+  max-width: 50rem;
+  height: 30rem;
+  transform: translateX(-50px); /*overlap*/
+  position: relative;
+}
+.users__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10%;
+}
+.users__img:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to_right, #ff6368, #3f3d56);
+  box-shadow: 0.5rem 0.5rem 3rem 1px;
+  border-radius: 0;
+}
+.users__date span {
+  display: block; /*on top of each other*/
+  font-size: 20px;
+  color: gray;
+  margin: 0.5rem 0;
+  padding: 0px;
+}
+
+.users__title {
+  font-size: 40px;
+  margin: 0px 0 20px;
+  color: black;
+  padding: 0px;
+}
+.users__text {
+  margin-bottom: 48px;
+  font-size: 20px;
+  padding: 0px;
+}
+.users__cta {
+  display: inline-flex;
+  padding: 20px 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: white;
+  background: linear-gradient(to bottom, #3f3d56 0%, #ff6368 100%);
+  border-radius: 0.8rem;
+  text-decoration: none;
+}
+.users__cta:hover {
+  background: linear-gradient(to bottom, #ff6368 0%, #3f3d56 100%);
+}
+.logout {
+  border-radius: 30px;
+  color: black;
+  font-size: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+.logout:hover {
+  background-image: linear-gradient(
+    5deg,
+    rgba(255, 225, 225, 0.827) 20%,
+    #3f3d56 70%
+  );
+}
+@media screen and (max-width: 1268px) {
+  .pet-posts {
+    max-width: 80rem;
+  }
+  .nav-links li a {
+    font-size: 28px;
+  }
+  .pet-posts__img {
+    min-width: 20rem;
+    max-width: 30rem;
+  }
+  .btn-delete {
+    font-size: 25px;
+  }
+  .btn-share {
+    font-size: 20px;
+  }
+  .up {
+    width: 100%;
+  }
+  .logo {
+    width: 0;
+  }
+  .comment-text {
+    border: 1px solid #ffffff;
+    font-size: 15px;
+    text-indent: 5px;
+    width: 45%;
+  }
+
+  .comment-display {
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    margin-top: 10px;
+  }
+
+  .btn-comment {
+    color: #000000;
+    font-size: 15px;
+    width: 20%;
+    background-color: rgba(255, 225, 225, 0.827);
+  }
+}
+.familyname {
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  font-size: 30px;
+  background: linear-gradient(to bottom, #3f3d56 0%, #ff6368 100%);
+}
+
+@media screen and (max-width: 868px) {
+  .pet-posts {
+    max-width: 70rem;
+  }
+  .btn-delete {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 25px;
+  }
+  .logo {
+    width: 0;
+  }
+  .pet-posts__img {
+    min-width: 100%;
+    max-width: 100%;
+    transform: translate(0, 0rem);
+  }
+  .comment-text {
+    border: 1px solid #ffffff;
+    font-size: 15px;
+    text-indent: 5px;
+    width: 45%;
+  }
+
+  .comment-display {
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    margin-top: 10px;
+  }
+
+  .btn-comment {
+    color: #000000;
+    font-size: 15px;
+    width: 20%;
+    background-color: rgba(255, 225, 225, 0.827);
+  }
+  .btn-search {
+    width: 60%;
+    font-size: 15px;
+  }
+  .nav-links li {
+    margin: 0 0px;
+  }
+}
+@media screen and (max-width: 568px) {
+  * {
+    font-size: 15px;
+  }
+  .pet-posts {
+    padding: 2.5 rem;
+    flex-direction: column;
+  }
+  .up {
+    min-width: 100%;
+    max-width: 100%;
+    height: 10%;
+    font-size: 5px;
+  }
+  .logo {
+    width: 0;
+  }
+  .pet-posts__img {
+    min-width: 100%;
+    max-width: 100%;
+    transform: translate(0, 0rem);
+  }
+  .btn-delete {
+    font-size: 15px;
+  }
+  .btn-share {
+    font-size: 12px;
+  }
+  .nav-links li a {
+    font-size: 20px;
+  }
+  .comment-text {
+    border: 1px solid #ffffff;
+    font-size: 10px;
+    text-indent: 5px;
+    width: 45%;
+  }
+  .btn-comment {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .nav-links li a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .nav-links li a {
+    font-size: 6px;
+  }
+  .btn-search {
+    width: 60%;
+    font-size: 10px;
+  }
+  .btn-delete {
+    font-size: 10px;
+  }
+  .btn-share {
+    font-size: 10px;
+  }
+  .btn-comment {
+    font-size: 10px;
+  }
+}

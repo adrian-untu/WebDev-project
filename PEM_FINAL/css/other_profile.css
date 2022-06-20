@@ -233,26 +233,6 @@ h2 {
   text-indent: 5px;
 }
 
-.btn-share {
-  color: #ffffff;
-  font-size: 19px;
-  float: right;
-  width: 100px;
-  line-height: 30px;
-  background-color: #ff6368;
-  border: 2px solid #ff6368;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -o-border-radius: 100px;
-}
-
-.btn-share:hover {
-  color: #ff6368;
-  background-color: #3f3d56;
-  border: 2px solid #3f3d56;
-}
-
 #right-nav1 {
   margin-top: 10px;
   width: 97.5%;
@@ -312,28 +292,6 @@ h2 {
   height: 50%;
 }
 
-.delete-post {
-  float: right;
-  margin-right: 5px;
-  margin-top: 5px;
-}
-
-.btn-delete {
-  color: #ffffff;
-  font-size: 25px;
-  width: 100%;
-  height: 50%;
-  background-color: rgba(255, 225, 225, 0.827);
-  border: 1px solid #3f3d56;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-
-.btn-delete:hover {
-  color: #000000;
-}
 h1 {
   color: black;
   font-size: 20px;
@@ -403,7 +361,27 @@ h1 {
   border: 2px solid #cccccc;
   margin-top: 10px;
 }
+.btn-delete {
+  color: #ffffff;
+  font-size: 25px;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(255, 225, 225, 0.827);
+  border: 1px solid #3f3d56;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+}
 
+.btn-delete:hover {
+  color: #000000;
+}
+.delete-post {
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}
 .btn-comment {
   color: #ffffff;
   font-size: 20px;
@@ -439,12 +417,6 @@ h1 {
     min-width: 20rem;
     max-width: 30rem;
   }
-  .btn-delete {
-    font-size: 25px;
-  }
-  .btn-share {
-    font-size: 20px;
-  }
   .up {
     width: 100%;
     padding: 2px;
@@ -464,20 +436,11 @@ h1 {
     border: 2px solid #cccccc;
     margin-top: 10px;
   }
-  .btn-comment {
-    color: #000000;
-    font-size: 15px;
-    width: 20%;
-    background-color: rgba(255, 225, 225, 0.827);
-  }
 }
 
 @media screen and (max-width: 868px) {
   .pet-posts {
     max-width: 70rem;
-  }
-  .btn-delete {
-    font-size: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -535,12 +498,6 @@ h1 {
   .logo {
     width: 0;
   }
-  .btn-delete {
-    font-size: 15px;
-  }
-  .btn-share {
-    font-size: 12px;
-  }
   .nav-links li a {
     font-size: 20px;
   }
@@ -562,16 +519,6 @@ h1 {
 @media screen and (max-width: 300px) {
   .nav-links li a {
     font-size: 12px;
-  }
-  .btn-search {
-    width: 60%;
-    font-size: 10px;
-  }
-  .btn-delete {
-    font-size: 15px;
-  }
-  .btn-share {
-    font-size: 10px;
   }
   .btn-comment {
     font-size: 12px;

@@ -45,7 +45,7 @@
 			echo "<script>alert('Passwords do not match!'); window.location='login_register.php'</script>";
 			exit();
 			}
-        else
+        else if(checkdate($m,$d,$y)==true && $y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m==date("m")&& $d<date("d")))
 			{
 				$md5_pass=md5($password);
 				$sql1=mySQLi_query($con,"select * from user");
@@ -53,6 +53,9 @@
 				mySQLi_query($con,"INSERT INTO user (user_id,firstname,lastname,username,birthday,email,password,profile_picture,family_id)
 				VALUES ('$count','$firstname','$lastname','$username','$birthday','$email','$md5_pass', 'upload/default_profile.jpg', '0')");
 				echo "<script>alert('Account successfully created!'); window.location='login_register.php'</script>";
+			}
+			else{
+					echo "<script>alert('The birthday introduced is invalid!'); window.location='edit_profile.php?user_id=".$id."'</script>";		
 			}
 	}
 	

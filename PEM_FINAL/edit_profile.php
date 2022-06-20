@@ -24,13 +24,14 @@ $copy_birthday=$birthday_save;
 list($y,$m,$d) = explode('-', $copy_birthday);
 $old_password_save=$_POST['old_password'];
 $new_password_save=$_POST['new_password'];
+$md5_old_pass=md5($old_password_save);
+$md5_new_pass=md5($new_password_save);
 if(checkdate($m,$d,$y)==true && $y< date("Y") ||($y== date("Y") && $m<date("m")) || ($y== date("Y") && $m==date("m")&& $d<date("d")))
 {
 	mysqli_query($con,"UPDATE user SET firstname ='$first_save', lastname ='$last_save', username ='$username_save', birthday='$birthday_save'
  WHERE user_id = '$id'");
 	echo "Saved!";
 	header("Location: profile.php");
-	exit();
 }
 else
 {
@@ -44,10 +45,10 @@ if($new_password_save=="")
 	echo "Saved!";
 	header("Location: profile.php");			
 }
-else if($old_password_save==$old_password && $new_password_save!="")
+else if($md5_old_pass==$old_password && $new_password_save!="")
 {
 	mysqli_query($con,"UPDATE user SET firstname ='$first_save', lastname ='$last_save', username ='$username_save', 
- password='$new_password_save' WHERE user_id = '$id'");
+ password='$md5_new_pass' WHERE user_id = '$id'");
 	echo "Saved!";
 	header("Location: profile.php");	
 }

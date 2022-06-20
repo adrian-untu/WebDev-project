@@ -3,10 +3,7 @@
              $url = "https://";   
         else  
              $url = "http://";   
-        // Append the host(domain name, ip) to the URL.   
         $url.= $_SERVER['HTTP_HOST'];   
-        
-        // Append the requested resource location to the URL   
         $url.= $_SERVER['REQUEST_URI'];    
         if(preg_match_all('/\d+/', $url, $numbers))
         $id_family = end($numbers[0]);
@@ -65,8 +62,32 @@
 					<td><input type="date" name="birthday" value="<?php echo $birthday; ?>" class="form-1" title="Enter your username" required /></td>
 				</tr>
                 <tr>
-                    <td><label>Food plan</label></td>
-					<td><input type="text" name="food_plan" class="form-1" placeholder="Enter food plan" required /></td>
+                    <td><label> Monday</label></td>
+					<td><input type="text" name="monday" class="form-1" placeholder="Enter monday food plan" required /></td>
+                </tr>
+                <tr>
+                    <td><label> Tuesday</label></td>
+					<td><input type="text" name="tuesday" class="form-1" placeholder="Enter tuesday food plan" required /></td>
+                </tr>
+                <tr>
+                    <td><label> Wednesday</label></td>
+					<td><input type="text" name="wednesday" class="form-1" placeholder="Enter wednesday food plan" required /></td>
+                </tr>
+                <tr>
+                    <td><label> Thursday</label></td>
+					<td><input type="text" name="thursday" class="form-1" placeholder="Enter thursday food plan" required /></td>
+                </tr>
+                <tr>
+                    <td><label> Friday</label></td>
+					<td><input type="text" name="friday" class="form-1" placeholder="Enter friday food plan" required /></td>
+                </tr>
+                <tr>
+                    <td><label> Saturday</label></td>
+					<td><input type="text" name="saturday" class="form-1" placeholder="Enter saturday food plan" required /></td>
+                </tr>
+                <tr>
+                    <td><label> Sunday</label></td>
+					<td><input type="text" name="sunday" class="form-1" placeholder="Enter sunday food plan" required /></td>
                 </tr>
                 <tr>
                     <td><label>Food restrictions</label></td>

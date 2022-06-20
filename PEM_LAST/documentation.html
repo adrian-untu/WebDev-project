@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+</head>
+
+<body>
+    <p><strong>The PET SMART MANAGER project is done by Badarau Dragos and Untu George - Adrian, from group 2A1.</strong></p>
+    <ul>
+        <li>Introduction</li>
+    </ul>
+    <ol>
+        <li>Purpose</li>
+        <li>Product scope</li>
+    </ol>
+    <ul>
+        <li>Overall description</li>
+    </ul>
+    <ol>
+        <li>Product functions</li>
+        <li>User classes and characteristics</li>
+        <li>Operating environment</li>
+        <li>Design and Implementation Constraints</li>
+        <li>User documentation</li>
+        <li>Assumptions and dependencies</li>
+    </ol>
+    <ul>
+        <li>External Interface Requirements</li>
+    </ul>
+    <ol>
+        <li>User Interfaces</li>
+        <li>Hardware Interfaces</li>
+        <li>Software Interfaces</li>
+        <li>Communications Interfaces</li>
+    </ol>
+    <ul>
+        <li>System Features</li>
+    </ul>
+    <ol>
+        <li>Generate pet profiles</li>
+        <li>Find friends</li>
+        <li>Post to social media</li>
+        <li>Make memories private/public</li>
+        <li>Manage health care and feeding schedule</li>
+        <li>Login</li>
+    </ol>
+    <ul>
+        <li>Other Nonfunctional Requirements</li>
+    </ul>
+    <ol>
+        <li>Security Requirements</li>
+        <li>Software Quality Attributes</li>
+    </ol>
+    <p><br></p>
+    <p><strong>1.1 Purpose</strong></p>
+    <p>Develop a web application that allows authenticated users to manage the resources regarding the care of an animal or group of pets within a possible pet owner family.</p>
+    <p><strong>1.2 Product scope</strong></p>
+    <p>Manage the feeding schedule, restrictions, various multimedia resources (photos, movies, audio files) regarding the evolution of the animal, the medical history (including first aid methods), the relationship with other animals will be targeted.</p>
+    <p><strong>2.1 Product functions</strong></p>
+    <p>The user will be able to:</p>
+    <ul>
+        <li>Upload images, videos about his/her personal pet/s and its evolution in time</li>
+        <li>Monitorise its eating habits, medical history</li>
+        <li>Discover other people which have the same interests or the same kind of pets</li>
+        <li>Post relevant moments on social media</li>
+        <li>Make the memories of the pets public, available only to the family or private depending on the preferences</li>
+        <li>Overall create an unique and personalized experience for your pets</li>
+        <li>Create families and add multiple pets to it</li>
+        <li>Visualize other pet&apos;s profiles and evolution</li>
+    </ul>
+    <p><strong>2.2 User classes and characteristics</strong></p>
+    <ul>
+        <li>Families</li>
+        <li>Pet/s owners</li>
+    </ul>
+    <p><strong>2.3 Operating environment</strong></p>
+    <ul>
+        <li>All the files and contents will be uploaded to a database which stores everything</li>
+        <li>The pages are designed to be used on various devices(phones, laptops, tablets) and operating systems</li>
+    </ul>
+    <p><strong>2.4 Design and Implementation Constraints</strong></p>
+    <ul>
+        <li>In order to give a full experience to the end user, the user interface will consist in HTML5, CSS3, JavaScript and the back-end of the application will consist in PHP scripts, SQL database</li>
+        <li>Only the interface scripts will be public, the back-end needs to be private so no user can alter the integrity of the website</li>
+    </ul>
+    <p><strong>2.5 User documentation</strong></p>
+    <ul>
+        <li>There is a dedicated section named first aid which includes a guide with precious information in case of a pet emergency.</li>
+    </ul>
+    <p><strong>2.6 Assumptions and Dependencies</strong></p>
+    <ul>
+        <li>Everything is server-based so it shouldn&apos;t be down for a long time when it crashes or has updates ongoing</li>
+        <li>The database should not have any issue with storing the data (storage capacity, file format, wrong places for files)</li>
+    </ul>
+    <p><strong>3.1 User interfaces</strong></p>
+    <ul>
+        <li>All types of accounts will have access to all of the pages that they are supposed to see (regarding private or public content)</li>
+        <li>The user will always be able to Log Out and the guest will be able to Register/Sign In from the pages</li>
+        <li>Each user will be able to have more pets and the pets will each have a profile of their own, while being able to make friends in the community</li>
+        <li>Users will be notified when any error will appear</li>
+        <li>Users will be able to report any problem to the admin account and the solution will come in a short time no matter the request</li>
+        <li>All registered users can add or remove significant memories of their pets, track their evolution and schedule, make posts private or public, post on social media and be free to have a profile configured to their own expectations</li>
+    </ul>
+    <p><strong>3.2 Hardware interfaces</strong></p>
+    <ul>
+        <li>All device types will be supported</li>
+        <li>The data will be stored on a server-based platform with enough storage to handle all media files</li>
+        <li>All files will be accessed by using scripts that are based on SQL commands</li>
+    </ul>
+    <p><strong>3.3 Software interfaces</strong></p>
+    <ul>
+        <li>The data is stored in a server-based database and the website will be able to access all needed documents via commands done by a script</li>
+        <li>The website will be accessible from all types of the devices as they will all be made responsive</li>
+        <li>Each and every type of file (video, audio, text) will be added to the needed table of the database via PHP scripts</li>
+        <li>All software components will have access to the required scripts or html/css templates as the pages need to be easy to use and effective in doing their tasks</li>
+    </ul>
+    <p><strong>3.4 Communications interfaces</strong></p>
+    <ul>
+        <li>All websites are on web browsers</li>
+        <li>All users are registered via e-mail addresses and will get any updates that are made from or to their account (report results, account deletion, new media added by friends, health care and appointments reminders etc)</li>
+        <li>HTTPS will be used, taking into considerations HTTP protocols regarding safety and general use</li>
+    </ul>
+    <p><strong>4.1 Generate pet profiles</strong></p>
+    <ul>
+        <li>Each family has the option to add new pets. On the family section, there is a button add pet which redirects the user to a panel which must be completed according to all the information (name, profile picture, restrictions, food planning - each day and birthday) needed for the pet. Each pet new created will be stored in the pet database.&nbsp;</li>
+    </ul>
+    <p><strong>4.2 Find friends</strong></p>
+    <ul>
+        <li>The find friends option is available for the pets. Each pet has on its own profile the add friend button which will redirect the pet to all the other pets in order to begin a friendship. If the friendship is created, the friendship database will store each friend&apos;s id. Also, there is a button on each pet&apos;s profile to view the pet&apos;s friends.&nbsp;</li>
+    </ul>
+    <p><strong>4.3 Post on social media</strong></p>
+    <ul>
+        <li>The user can share a post to facebook, linkedin and twitter. The posts he can share are the one of his own and its family. The sharing options opens a windows pop-up which redirects the post to the desired social media. A<span style='color: rgb(0, 0, 0); font-family: "Times New Roman"; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;'>n account is mandatory if someone wants to access the post shared. If the user wants to access the post shared, he will be redirected, if he has an account, to a page only with the post shared.&nbsp;</span></li>
+    </ul>
+    <p><strong>4.4 Make memories public/only family/private</strong></p>
+    <ul>
+        <li>The memories have three levels of privacy: public, only family and private. The level of privacy is unique on every post and influences the way it appears for other users. The public privacy is the least restrictive one, a public post is available in the homepage and anyone can see it. The family only type of privacy restricts the post from being available on the homepage but still makes it public for the family members and the pet&apos;s friends. The private level of privacy only allows the post to be seen by the user who posted it. The security level is stored in the database as a section in the pet database.&nbsp;</li>
+    </ul>
+    <p><strong>4.5 Manage health care and feeding schedule</strong></p>
+    <ul>
+        <li>The pet profile will include the possibility of setting an everyday of the week food plan for the pet. The plan can always be edited and will be stored in the pet database where there is a column for each day of the week. The medical history of the pet can be accessed through the medical history button which will redirect the user to a dedicated page for the medical history. There will be listed all the pet&apos;s medical issues and occurrences and more can be added through the add new entry button. Each medical fact must have a description and a date (on which it occurred ) and &nbsp;are stored in a special medical history database.&nbsp;</li>
+    </ul>
+    <p><strong>4.6 Login</strong></p>
+    <ul>
+        <li>All the users will have to introduce their credentials according to the username and password introduced in the register panel. Those are verified with the information in the database and if they&apos;re correctly introduced the user will be logged in, redirected to the homepage and a session for him will be created.&nbsp;</li>
+    </ul>
+    <p><strong>5.1 Security Requirements</strong></p>
+    <ul>
+        <li>All data will be encrypted so the ones that want to make illegal changes will not be able to</li>
+        <li>Regarding the attacks, we have developed manners to handle successfully 2 types of attacks:&nbsp;</li>
+        <li>1. NO-SQL INJECTION: The definition of the concept is that all queries must be handled in scripts outside the html website. The scripts need all to be parameterised so that the users cannot create statements of their own and also need to be on scripts that are introduced in the html website with the &quot;required&quot; mark so that it needs to be executed that time and to be leaving in the view page only the output of the script. We have configured the scripts by the PDO variable, which reconnects to the database every time it needs to handle the database content.</li>
+        <li>&nbsp;2. CROSS-SITE SCRIPTING: The definition of the concept is that hackers can insert into input fields from html websites malicious input that redirects to either websites of their own from which they do malicious things. We are protecting our website from this behavior by using htmlspecialchars(), a function of PHP that filters the input so that no signs like &quot;&lt;, &gt;... &quot; return the exact same output in the database. By doing this, the input is safe no matter the input so we can have the website secured as successfully as possible&nbsp;</li>
+    </ul>
+    <p><strong>5.2 Software Quality Attributes</strong></p>
+    <ul>
+        <li>The profiles and pages will be adapted to the end user</li>
+        <li>The content will be available to the end users as the privacy requirements are satisfied</li>
+        <li>All data will be displayed accordingly</li>
+        <li>All content can be modified, deleted or new content can be added at any time</li>
+        <li>The website can be used on all types of devices, being reliable to all users</li>
+        <li>All content will be organised with no imperfections</li>
+        <li>The website will be able to be used by all users, taking into consideration that the interface is easy to understand and use</li>
+    </ul>
+    <p><strong>6.1 References</strong></p>
+    <ul>
+        <li><a href="https://github.com/rick4470/IEEE-SRS-Tempate#11-purpose%22%3E">Template</a></li>
+        <li><a href="https://profs.info.uaic.ro/~andrei.panu/webprojects.html ">Project</a></li>
+        <li><a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-projects.html">Project requirements</a></li>
+        <li><a href="https://github.com/adrian-untu/WebDev-project">GitHub page</a></li>
+    </ul>
+</body>
+
+</html>
